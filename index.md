@@ -1,7 +1,5 @@
 # 조은희 (eun2ce)
 
-<div align="right"><sub><i>Last updated: 2022.08.06</i></sub></div>
-
 **저는 `______` 하는 엔지니어입니다.**
 
 1. 제품의 변경을 우선적으로 고민하는
@@ -19,8 +17,6 @@
 | **GitHub**  | <https://github.com/eun2ce>     |
 |  **Blog**   | <https://eun2ce.tistory.com>    |
 | **Contact** | <joeun2ce@gmail.com>            |
-
-<br />
 
 # Experiences
 
@@ -123,21 +119,8 @@
 
 - [interview](https://signal.sedaily.com/NewsView/1VGLKLN4T2/) (19.03)
 
-<br />
-
 # Education
 
 ### coursera
 
 (21.07 - 21.11)  practical data science 수료
-
-<div align="center" class="final">
-
-_감사합니다._
-
-<br/>
-
-<sub><sup>Service Engineer, <a href="https://github.com/eun2ce">@eun2ce</a></sup></sub>
-
-</div>
-
