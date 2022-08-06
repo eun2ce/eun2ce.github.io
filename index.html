@@ -4,24 +4,10 @@
     <meta charset="UTF-8">
     <title>index</title>
     <link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.1/markdown-it.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-	<script>
-		var doc = new jsPDF();
-		var specialElementHandlers = {
-			'#editor': function (element, renderer) {
-				return true;
-			}
-		};
-
-		$('#cmd').click(function () {
-			doc.fromHTML($('#content').html(), 15, 15, {
-				'width': 170,
-				'elementHandlers': specialElementHandlers
-			});
-			doc.save('resume-eunheejo.pdf');
-		});
-	</script>
+	<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 	<script>
         function makeAnchor(node) {
             // From @tomfun https://gist.github.com/asabaylus/3071099#gistcomment-1622315
@@ -41,13 +27,54 @@
             node.id = anchor;
         }
 
-        function processMarkdown(textContent) {
+		function savePDF(){
+			//저장 영역 div id
+			html2canvas($('#pdfArea')[0] ,{
+				//logging : true,		// 디버그 목적 로그
+				//proxy: "html2canvasproxy.php",
+				allowTaint : true,	// cross-origin allow
+				useCORS: true,		// CORS 사용한 서버로부터 이미지 로드할 것인지 여부
+				scale : 2			// 기본 96dpi에서 해상도를 두 배로 증가
+
+			}).then(function(canvas) {
+				// 캔버스를 이미지로 변환
+				var imgData = canvas.toDataURL('image/png');
+
+				var imgWidth = 190; // 이미지 가로 길이(mm) / A4 기준 210mm
+				var pageHeight = imgWidth * 1.414;  // 출력 페이지 세로 길이 계산 A4 기준
+				var imgHeight = canvas.height * imgWidth / canvas.width;
+				var heightLeft = imgHeight;
+				var margin = 10; // 출력 페이지 여백설정
+				var doc = new jsPDF('p', 'mm');
+				var position = 0;
+
+				// 첫 페이지 출력
+				doc.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+				heightLeft -= pageHeight;
+
+				// 한 페이지 이상일 경우 루프 돌면서 출력
+				while (heightLeft >= 20) {			// 35
+					position = heightLeft - imgHeight;
+					position = position - 20 ;		// -25
+
+					doc.addPage();
+					doc.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+					heightLeft -= pageHeight;
+				}
+
+				// 파일 저장
+				doc.save('eun2ce_resume.pdf');
+			});
+		}
+
+		function processMarkdown(textContent) {
             // Insert html for the markdown into an element for processing.
             var md = window.markdownit();
 
             var html = md.render(textContent);
 
             var markdownRoot = document.createElement('div');
+			markdownRoot.id = "pdfArea";
             markdownRoot.className = "markdownRoot";
             markdownRoot.innerHTML = html;
 
@@ -100,7 +127,7 @@
             document.write('<div align="right"><sub><i>Last updated: 2022.08.06</i></sub></div>');
             document.body.appendChild(markdownRoot);
             document.write('<div align="center" className="final"><em>감사합니다.</em><br/>Service Engineer, <a href="https://github.com/eun2ce">@eun2ce</a></div> ');
-			document.write('<br/><div id="content" align="right"><button id="cmd">generate PDF</button></div><br/>')
+			document.write('<br/><button class="btn btn-info" id="downloadPDF" onclick=savePDF()>download</button><br/>')
 		}
 
         fetch('./index.md')
