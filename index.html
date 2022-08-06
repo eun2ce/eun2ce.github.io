@@ -8,6 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.1/markdown-it.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 	<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script>
         function makeAnchor(node) {
             // From @tomfun https://gist.github.com/asabaylus/3071099#gistcomment-1622315
@@ -124,10 +126,23 @@
             document.title = title;
 
             // Finally insert the markdown.
-            document.write('<div align="right"><sub><i>Last updated: 2022.08.06</i></sub></div>');
+            document.write('<div align="right" ' +
+					'style="top: 20;bottom: 0; margin: auto; position: absolute; left: 0; right: 20;">' +
+					'<sub><i>Last updated: 2022.08.06</i></sub> <br/><br/> ' +
+					'<button id="downloadPDF" onclick=savePDF() style="  background-color: #008CBA;\n' +
+					'  border: none;\n' +
+					'  color: white;\n' +
+					'  padding: 5px 10px;\n' +
+					'  text-align: center;\n' +
+					'  text-decoration: none;\n' +
+					'  display: inline-block;\n' +
+					'  font-size: 12px;\n' +
+					'  cursor: pointer;">download PDF</button>' +
+					'</div>');
             document.body.appendChild(markdownRoot);
-            document.write('<div align="center" className="final"><em>감사합니다.</em><br/>Service Engineer, <a href="https://github.com/eun2ce">@eun2ce</a></div> ');
-			document.write('<br/><button class="btn btn-info" id="downloadPDF" onclick=savePDF()>download</button><br/>')
+            document.write('<div align="center" className="final">' +
+					'<em>감사합니다.</em><br/>Service Engineer, ' +
+					'<a href="https://github.com/eun2ce">@eun2ce</a></div> ');
 		}
 
         fetch('./index.md')
