@@ -3,8 +3,8 @@ title: "Java 여러가지 버전을 함께 사용하는 방법"
 pin: false
 math: false
 mermaid: false
-categories: [ "language", "java" ]
-tags: [ "프로그래밍", "java" ]
+categories: [ "java", "language"]
+tags: [ "java", "프로그래밍" ]
 date: 2024-12-02 10:51:00 +0900
 image:
   path: /assets/img/posts/language/java/2024-12-02-java-version-switching/2024120201.png

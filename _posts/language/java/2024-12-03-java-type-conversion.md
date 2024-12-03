@@ -3,8 +3,8 @@ title: "Java 형변환"
 pin: false
 math: false
 mermaid: false
-categories: [ "language", "java" ]
-tags: [ "프로그래밍", "java" ]
+categories: [ "java", "language" ]
+tags: [ "java", "프로그래밍" ]
 date: 2024-12-03 11:28:00 +0900
 image:
   path: /assets/img/posts/language/java/2024-12-03-java-type-conversion/2024120301.png
