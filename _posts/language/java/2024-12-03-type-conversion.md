@@ -1,8 +1,8 @@
 ---
 title: "Java 형변환"
-author:
-  name: "eun2ce"
-  link: "https://github.com/eun2ce"
+pin: false
+math: false
+mermaid: false
 categories: [ "language", "java" ]
 tags: [ "프로그래밍", "java" ]
 date: 2024-12-03 11:28:00 +0900

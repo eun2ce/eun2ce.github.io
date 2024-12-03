@@ -1,11 +1,12 @@
 ---
 title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] Java 프로그래밍 기초"
-author:
-  name: "eun2ce"
-  link: "https://github.com/eun2ce"
 categories: [ "external-experience", "likelion" ]
 tags: [ "java", "프로그래밍" ]
-date: 2024-12-03 11:28:00 +0900
+date: 2024-12-02 11:28:00 +0900
+last_modified_at: 2024-12-03 13:00:00 +0900
+pin: false
+math: false
+mermaid: false
 image:
   path: /assets/img/posts/external-experience/likelion/2024-12-03-basic-java/2024120301.gif
   alt: "[ 멋쟁이사자처럼 백엔드 스쿨 ] Java 프로그래밍 기초"
@@ -149,7 +150,7 @@ public class DocTest {
 
 ### 반복문
 
-```
+```java
 public class Rectangle {
     public static void main(String[] args) {
     // 변수 선언
@@ -250,3 +251,21 @@ int i = 1;
 ### 형 변환
 
 ![java 형변환(source:techvidvan)](/assets/img/posts/external-experience/likelion/2024-12-03-basic-java/2024120302.png)
+
+### 조건문
+
+특정 조건을 만족할 때 실행
+
+```java
+public class Exam {
+  public static void main(String[] args) {
+    if(num % 2 == 0) {
+      System.out.printf("짝수");
+    } else if (num % 3 == 0) {
+      System.out.printf("3의 배수");
+    } else {
+      System.out.printf("홀수");
+    }
+  }
+}
+```
