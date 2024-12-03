@@ -148,23 +148,6 @@ public class DocTest {
 }
 ```
 
-### 반복문
-
-```java
-public class Rectangle {
-    public static void main(String[] args) {
-    // 변수 선언
-    int i = 10;
-    // 반복문 while
-     // while (조건식) { 반복 할 내용 }
-     while(i > 0) {
-     	print(i);
-        i -= 1;
-     }
-    }
-}
-```
-
 ### 접근 제어자
 
 접근 제어자는 private < default < protected < public 순으로 보다 많은 접근을 허용
@@ -261,7 +244,7 @@ int i = 1;
 
 #### if
 
-조건식의 결과는 `true` or `false`
+조건식의 결과는 `true` or `false`  
 `true` 일 때 실행
 
 ```java
@@ -280,6 +263,126 @@ public class Exam {
 
 #### switch
 
-```java
+##### 기본 switch 구문
 
+switch 구문은 `break;`를 적절히 걸어주지 않으면 하위 `case` 문으로 넘어가기 때문에 반드시 주의할 것
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    int num = 2;
+
+    switch (num){
+      case 1:
+        System.out.println("case 1");
+        break; // 걸어주지 않으면 하위 케이스도 전부 출력
+      case 2:
+        System.out.println("case 2");
+        // break;
+      case 3:
+        System.out.println("case 3");
+        break;
+      default: // optional
+        System.out.println("nothing");
+        break;
+    }
+  }
+}
+```
+
+```bash
+// 실행 결과
+case 2
+case 3
+```
+
+#####
+
+JDK 14, 17에서 `switch`와 관련된 새로운 문법이 추가 됨
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        int num = 2;
+
+        switch (num) {
+            case 1 -> System.out.println("case 1");
+            case 2 -> {
+                System.out.println("case 2");
+                System.out.println("이런 형식으로도 가능");
+            }
+            case 3 -> System.out.println("case 3");
+            default -> System.out.println("nothing");
+        }
+    }
+}
+```
+
+```bash
+// 실행 결과
+case 2
+이런 형식으로도 가능
+```
+
+### 반복문
+
+#### while
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    // 변수 선언
+    int i = 10;
+    // 반복문 while
+    // while (조건식) { 반복 할 내용 }
+    while (i > 0) { // while(i-- > 0)
+      System.out.println(i); // 탈출 조건식이 참이면 실행 할 코드
+      i++; // 변수의 증강식
+    }
+  }
+}
+```
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    int i = 0;
+    while (i++ < 10) { // 이런 형태도 가능
+      if(i == 3) continue; // 빠져나가진 않지만 다음 조건으로
+      
+      System.out.println(i);
+      
+      if(i == 5) break; // 반복문 탈출
+    }
+  }
+}
+```
+
+```bash
+// 실행 결과
+1
+2
+4
+5
+```
+
+#### for
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        for(int i=0; i<5; i++){
+            System.out.println(i);
+        }
+    }
+}
+```
+
+```bash
+// 실행결과
+0
+1
+2
+3
+4
 ```

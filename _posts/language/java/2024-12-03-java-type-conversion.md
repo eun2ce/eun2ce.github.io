@@ -73,7 +73,7 @@ String binstr = Integer.toBinaryString(i);
 ```
 String hexstr = Integer.toString(i, 16);
 String hexstr = Integer.toHexString(i);
-Integer.toHexString(0x10000|i).substring(1).toUpperCase();
+Integer.toHexString(0x10000 | i).substring(1).toUpperCase();
 ```
 
 #### hexadecimal(String) to int
