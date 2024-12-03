@@ -119,10 +119,10 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: eun2ce/eun2ce.github.io # <gh-username>/<repo>
-    repo_id: R_kgDONXlbNQ
-    category: Announcements
-    category_id: DIC_kwDONXlbNc4CkzNx
+    repo: eun2ce/giscus # <gh-username>/<repo>
+    repo_id: R_kgDONYF4Hw
+    category: General
+    category_id: DIC_kwDONYF4H84Ck1hj
     mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
