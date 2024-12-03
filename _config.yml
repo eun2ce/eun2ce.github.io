@@ -28,8 +28,8 @@ url: "https://eun2ce.github.io"
 github:
   username: eun2ce # change to your GitHub username
 
-#twitter:
-#  username:  # change to your Twitter username
+twitter:
+  username: eun2ce # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -39,6 +39,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     # - https://twitter.com/username # change to your Twitter homepage
+    - https://x.com/eun2ce
     - https://github.com/eun2ce # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
