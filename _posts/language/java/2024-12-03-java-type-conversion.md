@@ -7,7 +7,7 @@ categories: [ "language", "java" ]
 tags: [ "프로그래밍", "java" ]
 date: 2024-12-03 11:28:00 +0900
 image:
-  path: /assets/img/posts/language/java/2024-12-03-type-conversion/2024120301.png
+  path: /assets/img/posts/language/java/2024-12-03-java-type-conversion/2024120301.png
   alt: "Java 형변환"
 ---
 

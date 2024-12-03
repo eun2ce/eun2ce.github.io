@@ -8,7 +8,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/external-experience/likelion/2024-12-03-basic-java/2024120301.gif
+  path: /assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/2024120301.gif
   alt: "[ 멋쟁이사자처럼 백엔드 스쿨 ] Java 프로그래밍 기초"
 ---
 
@@ -70,7 +70,7 @@ class Main {
 * void: 리턴 타입
 * main: 메소드 명
 
-![IDE 에서 psvm 단축어로 빠르게 메인함수 생성하기](/assets/img/posts/external-experience/likelion/2024-12-03-basic-java/2024120301.gif)
+![IDE 에서 psvm 단축어로 빠르게 메인함수 생성하기](/assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/2024120301.gif)
 > 에디터에서 `psvm` 단축어로 빠르게 생성 가능
 
 ### System.out: 표준출력 (stdout)
@@ -107,7 +107,7 @@ public class Hello {
 
 일반적인 설명을 달 때
 
-```
+```java
 public class Exam {
     public static void main(String[] args) {
         //System.out.pirnt("hello");
@@ -119,7 +119,7 @@ public class Exam {
 
 특정 부분을 사용하고 싶지 않을 때
 
-```
+```java
 /*
 public class Exam {
     public static void main(String[] args) {
@@ -133,7 +133,7 @@ public class Exam {
 
 코드와 문서를 포함한 개발자의 예제파일 및 문서화에 이용 (javadoc)
 
-```
+```java
 package day01;
 /**
  * java 주석 테스트 클래스
@@ -250,8 +250,9 @@ int i = 1;
 
 ### 형 변환
 
-![java 형변환(source:techvidvan)](/assets/img/posts/external-experience/likelion/2024-12-03-basic-java/2024120302.png)
-
+![java 형변환(source:techvidvan)](/assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/2024120302.png)
+예시는 아래 포스팅을 참고
+[java-type-conversion](/posts/java-type-conversion)
 ### 조건문
 
 특정 조건을 만족할 때 실행
