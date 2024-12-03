@@ -251,11 +251,18 @@ int i = 1;
 ### 형 변환
 
 ![java 형변환(source:techvidvan)](/assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/2024120302.png)
-예시는 아래 포스팅을 참고
-[java-type-conversion](/posts/java-type-conversion)
+
+포스팅 참고
+* [java-type-conversion](/posts/java-type-conversion)
+
 ### 조건문
 
 특정 조건을 만족할 때 실행
+
+#### if
+
+조건식의 결과는 `true` or `false`
+`true` 일 때 실행
 
 ```java
 public class Exam {
@@ -269,4 +276,10 @@ public class Exam {
     }
   }
 }
+```
+
+#### switch
+
+```java
+
 ```
