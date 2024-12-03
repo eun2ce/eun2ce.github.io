@@ -70,7 +70,7 @@ String binstr = Integer.toBinaryString(i);
 
 #### decimal to hexadecimal
 
-```java
+```
 String hexstr = Integer.toString(i, 16);
 String hexstr = Integer.toHexString(i);
 Integer.toHexString(0x10000|i).substring(1).toUpperCase();
@@ -85,7 +85,7 @@ int i = Integer.parseInt("B8DA3", 16);
 
 #### ASCII Code to String
 
-```java
+```
 String char = new Character((char)i).toString();
 ```
 
