@@ -11,8 +11,6 @@ image:
   alt: "Java 형변환"
 ---
 
-![java 형변환(source:techvidvan)](/assets/img/posts/language/java/2024-12-03-type-conversion/2024120301.png)
-
 #### int to String
 
 ```java
@@ -75,13 +73,7 @@ String binstr = Integer.toBinaryString(i);
 ```java
 String hexstr = Integer.toString(i, 16);
 String hexstr = Integer.toHexString(i);
-Integer.
-
-toHexString(0x10000|i).
-
-substring(1).
-
-toUpperCase();
+Integer.toHexString(0x10000|i).substring(1).toUpperCase();
 ```
 
 #### hexadecimal(String) to int
@@ -94,11 +86,7 @@ int i = Integer.parseInt("B8DA3", 16);
 #### ASCII Code to String
 
 ```java
-String char =new
-
-Character((char)i).
-
-toString();
+String char = new Character((char)i).toString();
 ```
 
 #### Integer to ASCII Code

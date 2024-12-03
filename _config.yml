@@ -121,8 +121,8 @@ comments:
   giscus:
     repo: eun2ce/giscus # <gh-username>/<repo>
     repo_id: R_kgDONYF4Hw
-    category: General
-    category_id: DIC_kwDONYF4H84Ck1hj
+    category: blog-comment
+    category_id: DIC_kwDONYF4H84Ck1m2
     mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
