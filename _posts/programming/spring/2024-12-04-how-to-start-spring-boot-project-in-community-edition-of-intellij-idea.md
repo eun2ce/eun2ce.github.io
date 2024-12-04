@@ -4,7 +4,7 @@ pin: false
 math: false
 mermaid: false
 categories: [ "programming", "spring" ]
-tags: [ "spring", "intellij", "java" ]
+tags: [ "community", "spring", "intellij", "java", "programming" ]
 date: 2024-12-04 10:51:00 +0900
 image:
   path: /assets/img/posts/programming/spring/2024-12-04-how-to-start-spring-boot-project-in-community-edition-of-intellij-idea/2024120403.png
