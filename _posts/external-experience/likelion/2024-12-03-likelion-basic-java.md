@@ -1,7 +1,7 @@
 ---
 title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] Java 프로그래밍 기초"
 categories: [ "external-experience", "likelion" ]
-tags: [ "java", "멋쟁이사자처럼", "프로그래밍" ]
+tags: [ "bootcamp", "java", "javac", "멋쟁이사자처럼", "부트캠프", "프로그래밍" ]
 date: 2024-12-02 11:28:00 +0900
 last_modified_at: 2024-12-04 18:00:00 +0900
 pin: false
@@ -237,7 +237,7 @@ int i = 1;
 ![java 형변환(source:techvidvan)](/assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/2024120302.png)
 
 > java 형 변환에 대해 자세한 내용이 궁금하시면, [이 글](/posts/java-type-conversion/)을 참고해주세요.
-{: .prompt-info }
+> {: .prompt-info }
 
 ### 조건문
 
@@ -433,8 +433,6 @@ public class Main {
 * 속도가 빠르다 (메모리상에 고정길이의 크기만큼 차지하기 때문)
 * 크기 수정 불가
 
-#### 기본형
-
 ```java
 // arraay01.java
 public class Main {
@@ -457,7 +455,7 @@ public class Main {
 위 배열을 가시적으로 추상적으로 표현하면 아래와 같다
 ![예제 배열 추상적 표현](/assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/2024120401.png)
 
-##### 심화
+심화
 
 * 생성과 동시에 초기화
 * 반복문을 이용하여 값을 할당하고, 출력
@@ -478,6 +476,96 @@ public class Main {
 }
 ```
 
-#### 참조형
+#### 배열의 확장
 
+배열은 확장하여 사용할 수 있다.  
+`int[][] iarr = new int[3][4];` 같은 형태로 생성할 수 있는데, 추상적으로 표현하자면 아래와 같다.
 
+![2차원 배열](/assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/20241204-13-34-00.png)
+
+이 이상 차원도 구현은 가능하나, 실제로 많이 사용되지는 않는다. 추상적인 객체의 상태를 인지할 수 있으면 될 것 같다.
+
+### 클래스 접근제한자 메소드
+
+```java
+// 클래스의 기본
+public class ItemForArray {
+
+  // 필드
+  private int price;
+  private String name;
+
+  // 메서드 getter
+  // 접근제한자 리턴타입 메서드명(매개변수들..){ ... }
+  public int getPrice() { // 함수명은 get[필드명] 형태는 약속
+    return price;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  // 메서드 setter
+  // 리턴 값 없음 (void - 예약어)
+  public void setPrice(int price) {
+    // price = price; // 이렇게 작성하면 어떤 price 값을 가르키는지 모름
+    this.price = price; // this 를 이용해 해당 속성을 명시
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  // 생성자
+  public ItemForArray(int price, String name) {
+    this.price = price;
+    this.name = name;
+  }
+}
+
+```
+
+* `setter`메서드는 일반적으로 외부에서 바꿀 수 없도록 하기 위해 없는 경우 존재
+
+#### 생성자
+
+* 객체를 초기화 하는 메서드 > 객체가 생성될 때 딱 한 번 실행
+* 리턴타입 없음
+* 접근제한자 있음
+
+### 클래스와 배열의 활용
+
+위에 작성한 `ItemForArray` 클래스 활용
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    ItemForArray[] itemArr;
+    itemArr = new ItemForArray[3];
+
+    ItemForArray item1 = new ItemArray(3000, "연필");
+    ItemForArray item2 = new ItemArray(5000, "컵");
+    ItemForArray item3 = new ItemArray(10000, "공책");
+
+    // itemArr 에 값을 할당
+    itemArr[0] = item1;
+    itemArr[1] = item2;
+    itemArr[2] = item3;
+
+    // 아래와 같이 가격과 상품명을 알 수 있음
+    itemArr[0].getPrice();
+    itemArr[2].getName();
+
+    // 반복문을 활용해서 클래스 내에 작성 한 getName 메서드를 호출하는 법
+    for (int i = 0; i < itemArr.length; i++) {
+      System.out.println(itemArr[i].getName());
+    }
+
+    // 세 가지를 모두 구매했을 때, 지불해야하는 금액 계산
+    int pay = 0;
+    for (int i = 0; i < itemArr.length; i++) {
+      pay += itemArr[i].getPrice();
+    }
+  }
+}
+```

@@ -7,7 +7,7 @@ categories: [ "java", "language" ]
 tags: [ "java", "프로그래밍" ]
 date: 2024-12-04 13:00:00 +0900
 image:
-  path: /assets/img/posts/language/java/2024-12-04-java-array-declaration-and-initialization/2024120401.png
+  path: /assets/img/posts/language/java/2024-12-04-java-array-declaration-and-initialization/20241204-14-01-00.png
   alt: "Java 배열 선언과 초기화"
 ---
 
