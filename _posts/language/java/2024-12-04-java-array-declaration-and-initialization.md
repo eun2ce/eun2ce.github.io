@@ -1,11 +1,11 @@
 ---
 title: "Java 배열 선언과 초기화"
-pin: false
-math: false
-mermaid: false
 categories: [ "language", "java" ]
 tags: [ "java", "프로그래밍" ]
 date: 2024-12-04 13:00:00 +0900
+pin: false
+math: false
+mermaid: false
 image:
   path: /assets/img/posts/language/java/2024-12-04-java-array-declaration-and-initialization/20241204-14-01-00.png
   alt: "Java 배열 선언과 초기화"

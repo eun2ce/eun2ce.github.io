@@ -1,11 +1,11 @@
 ---
 title: "Java 형변환"
-pin: false
-math: false
-mermaid: false
 categories: [ "language", "java" ]
 tags: [ "java", "프로그래밍" ]
 date: 2024-12-03 16:00:00 +0900
+pin: false
+math: false
+mermaid: false
 image:
   path: /assets/img/posts/language/java/2024-12-03-java-type-conversion/2024120301.png
   alt: "Java 형변환"
