@@ -16,7 +16,7 @@ image:
 java 에서 배열 선언과 초기화는 코드의 명확성과 사용 용도에 따라 적절히 구분되어야 합니다.  
 `int[] arr1 = {};`와 `int[] arr2;`로 예를들어 설명합니다.
 
-### `int[] arr1 = {};`
+### int[] arr1 = {}
 
 **초기화된 빈 배열**
 
@@ -43,7 +43,7 @@ public class ArrayExample1 {
 - **장점**:
   - NPE(NullPointerException) 방지 (초기화하면서 빈 배열을 명시적으로 생성하기때문)
 
-### 2. `int[] arr2;`
+### int[] arr2;
 
 **배열 참조 변수 선언**
 
