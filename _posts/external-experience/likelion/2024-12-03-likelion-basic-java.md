@@ -238,7 +238,7 @@ int i = 1;
 
 포스팅 참고
 
-* [java-type-conversion](/posts/java-type-conversion)
+* [java-type-conversion]({{ site.baseurl }}{% link _posts/2024-12-03-java-type-conversion.md %})
 
 ### 조건문
 
