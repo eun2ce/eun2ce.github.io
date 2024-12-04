@@ -3,7 +3,7 @@ title: "[intellij] community 에서 spring boot 프로젝트 설정하는 방법
 pin: false
 math: false
 mermaid: false
-categories: [ "spring", "programming"]
+categories: [ "programming", "spring" ]
 tags: [ "spring", "intellij", "java" ]
 date: 2024-12-04 10:51:00 +0900
 image:
@@ -15,6 +15,7 @@ intellij 에는 무료버전 community 와 유료버전 ultimate 가 있다.
 community 버전에는 spring initializr 가 따로 없어 그 방법을 메모한다.
 
 ## spring initializr 접속
+
 [https://start.spring.io/](https://start.spring.io/)
 
 ## 프로젝트 설정
@@ -36,6 +37,7 @@ community 버전에는 spring initializr 가 따로 없어 그 방법을 메모�
 // sbb.zip 파일 압축을 ~/works/sbb 에 풀어준다.
 $ unzip ~/Downloads/sbb.zip -d ~/works/sbb
 ```
+
 ![spring initializr 설정](/assets/img/posts/programming/spring/2024-12-04-how-to-start-spring-boot-project-in-community-edition-of-intellij-idea/2024120402.png)
 
 ## 실행
