@@ -237,7 +237,7 @@ int i = 1;
 ![java 형변환(source:techvidvan)](/assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/2024120302.png)
 
 > java 형 변환에 대해 자세한 내용이 궁금하시면, [이 글](/posts/java-type-conversion/)을 참고해주세요.
-> {: .prompt-info }
+{: .prompt-info }
 
 ### 조건문
 
@@ -386,7 +386,7 @@ public class Main {
 4
 ```
 
-#### 중첩 반복문
+##### 중첩 `for`문
 
 구구단 출력을 예제로 작성
 
@@ -403,7 +403,7 @@ public class Main {
 }
 ```
 
-##### 반복문에서의 label
+#### 반복문에서의 label  
 
 위 예제를 기반으로 설명
 
@@ -417,6 +417,23 @@ public class Main {
         System.out.println(i + "*" + j + "=" + (i * j));
       }
       System.out.println();
+    }
+  }
+}
+```
+
+#### for each
+
+java 가 업데이트 되어가면서 `for each` 구문을 지원
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    String[] numbers = {"one", "two", "three"};
+
+    // for (변수:반복되는 자료구조)
+    for (String number : numbers) {
+      System.out.println(number);
     }
   }
 }
@@ -569,3 +586,17 @@ public class Main {
   }
 }
 ```
+
+**참고**
+
+java 에서는 Arrays Class 에서 다양한 기능 지원
+
+```java
+import java.util.Arrays;
+
+int[] copyFrom = {1, 2, 3};
+int[] copyTo = Arrays.copyOf(copyFrom, copyFrom.length); // copyFrom 의 값을 copyTo 로 복사
+```
+
+> java 형 변환에 대해 자세한 내용이 궁금하시면, [이 글](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)을 참고해주세요.
+{: .prompt-info }
