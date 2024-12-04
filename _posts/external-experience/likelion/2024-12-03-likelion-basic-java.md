@@ -3,7 +3,7 @@ title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] Java 프로그래밍 기초"
 categories: [ "external-experience", "likelion" ]
 tags: [ "java", "멋쟁이사자처럼", "프로그래밍" ]
 date: 2024-12-02 11:28:00 +0900
-last_modified_at: 2024-12-03 13:00:00 +0900
+last_modified_at: 2024-12-04 18:00:00 +0900
 pin: false
 math: false
 mermaid: false
@@ -109,9 +109,9 @@ public class Hello {
 
 ```java
 public class Exam {
-    public static void main(String[] args) {
-        //System.out.pirnt("hello");
-    }
+  public static void main(String[] args) {
+    //System.out.pirnt("hello");
+  }
 }
 ```
 
@@ -135,6 +135,7 @@ public class Exam {
 
 ```java
 package day01;
+
 /**
  * java 주석 테스트 클래스
  *
@@ -142,9 +143,9 @@ package day01;
  * @since 2024.12.02
  */
 public class DocTest {
-    public static void main(String[] args) {
-        System.out.println("주석 테스트");
-    }
+  public static void main(String[] args) {
+    System.out.println("주석 테스트");
+  }
 }
 ```
 
@@ -236,6 +237,7 @@ int i = 1;
 ![java 형변환(source:techvidvan)](/assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/2024120302.png)
 
 포스팅 참고
+
 * [java-type-conversion](/posts/java-type-conversion)
 
 ### 조건문
@@ -250,7 +252,7 @@ int i = 1;
 ```java
 public class Exam {
   public static void main(String[] args) {
-    if(num % 2 == 0) {
+    if (num % 2 == 0) {
       System.out.printf("짝수");
     } else if (num % 3 == 0) {
       System.out.printf("3의 배수");
@@ -265,14 +267,14 @@ public class Exam {
 
 ##### 기본 switch 구문
 
-switch 구문은 `break;`를 적절히 걸어주지 않으면 하위 `case` 문으로 넘어가기 때문에 반드시 주의할 것
+switch 구문은 `break`를 적절히 걸어주지 않으면 하위 `case` 문으로 넘어가기 때문에 반드시 주의할 것
 
 ```java
 public class Main {
   public static void main(String[] args) {
     int num = 2;
 
-    switch (num){
+    switch (num) {
       case 1:
         System.out.println("case 1");
         break; // 걸어주지 않으면 하위 케이스도 전부 출력
@@ -290,35 +292,33 @@ public class Main {
 }
 ```
 
-```bash
+```
 // 실행 결과
 case 2
 case 3
 ```
 
-#####
-
-JDK 14, 17에서 `switch`와 관련된 새로운 문법이 추가 됨
+`break` 없이 사용하는 방법
 
 ```java
 public class Main {
-    public static void main(String[] args) {
-        int num = 2;
+  public static void main(String[] args) {
+    int num = 2;
 
-        switch (num) {
-            case 1 -> System.out.println("case 1");
-            case 2 -> {
-                System.out.println("case 2");
-                System.out.println("이런 형식으로도 가능");
-            }
-            case 3 -> System.out.println("case 3");
-            default -> System.out.println("nothing");
-        }
+    switch (num) {
+      case 1 -> System.out.println("case 1");
+      case 2 -> {
+        System.out.println("case 2");
+        System.out.println("이런 형식으로도 가능");
+      }
+      case 3 -> System.out.println("case 3");
+      default -> System.out.println("nothing");
     }
+  }
 }
 ```
 
-```bash
+```
 // 실행 결과
 case 2
 이런 형식으로도 가능
@@ -348,17 +348,17 @@ public class Main {
   public static void main(String[] args) {
     int i = 0;
     while (i++ < 10) { // 이런 형태도 가능
-      if(i == 3) continue; // 빠져나가진 않지만 다음 조건으로
-      
+      if (i == 3) continue; // 빠져나가진 않지만 다음 조건으로
+
       System.out.println(i);
-      
-      if(i == 5) break; // 반복문 탈출
+
+      if (i == 5) break; // 반복문 탈출
     }
   }
 }
 ```
 
-```bash
+```
 // 실행 결과
 1
 2
@@ -370,19 +370,115 @@ public class Main {
 
 ```java
 public class Main {
-    public static void main(String[] args) {
-        for(int i=0; i<5; i++){
-            System.out.println(i);
-        }
+  public static void main(String[] args) {
+    for (int i = 0; i < 5; i++) {
+      System.out.println(i);
     }
+  }
 }
 ```
 
-```bash
-// 실행결과
+```
+실행결과
 0
 1
 2
 3
 4
 ```
+
+#### 중첩 반복문
+
+구구단 출력을 예제로 작성
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    for (int i = 2; i < 10; i++) {
+      for (int j = 1; j < 10; j++) {
+        System.out.println(i + "*" + j + "=" + (i * j));
+      }
+      System.out.println();
+    }
+  }
+}
+```
+
+##### 반복문에서의 label
+
+위 예제를 기반으로 설명
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    outter:
+    for (int i = 2; i < 10; i++) {
+      if (i == 5) continue outter; // if 절 무시하고 중첩 for 문 실행 (구구단 중 5단이 출력되지 않음)
+      for (int j = 1; j < 10; j++) {
+        System.out.println(i + "*" + j + "=" + (i * j));
+      }
+      System.out.println();
+    }
+  }
+}
+```
+
+### 배열
+
+같은 타입의 데이터를 연속된 공간에 나열
+각 데이터에 인덱스(index)를 부여
+
+특징
+
+* 같은 타입의 데이터만 저장
+* 속도가 빠르다 (메모리상에 고정길이의 크기만큼 차지하기 때문)
+* 크기 수정 불가
+
+#### 기본형
+
+```java
+// arraay01.java
+public class Main {
+  public static void main(String[] args) {
+    // 선언
+    int[] iarr;
+    // 할당
+    iarr = new int[5];
+
+    iarr[0] = 10; // java index 는 0 부터 시작
+    iarr[1] = 20;
+    iarr[2] = 30;
+    iarr[3] = 40;
+    iarr[4] = 50;
+    iarr[5] = 60; // java.lang.ArrayIndexOutOfBoundsException
+  }
+}
+```
+
+위 배열을 가시적으로 추상적으로 표현하면 아래와 같다
+![예제 배열 추상적 표현](/assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/2024120401.png)
+
+##### 심화
+
+* 생성과 동시에 초기화
+* 반복문을 이용하여 값을 할당하고, 출력
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    int[] iarr = new int[5]; // 생성과 동시에 초기화
+
+    for (int i = 0; i < 5; i++) { // 값을 반복문 이용하여 할당 (array01.java) 와 동일한 배열 생성
+      iarr[i] = (i + 1) * 10;
+    }
+
+    for (int i = 0; i < 5; i++) {
+      System.out.println(iarr[i]); // 출력
+    }
+  }
+}
+```
+
+#### 참조형
+
+
