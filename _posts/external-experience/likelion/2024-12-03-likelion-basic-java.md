@@ -236,9 +236,8 @@ int i = 1;
 
 ![java 형변환(source:techvidvan)](/assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/2024120302.png)
 
-포스팅 참고
-
-* [java-type-conversion](/posts/java-type-conversion)
+> java 형 변환에 대해 자세한 내용이 궁금하시면, [이 글](/posts/java-type-conversion/)을 참고해주세요.
+{: .prompt-info }
 
 ### 조건문
 
