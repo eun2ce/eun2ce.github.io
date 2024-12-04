@@ -3,7 +3,7 @@ title: "Java 배열 선언과 초기화"
 pin: false
 math: false
 mermaid: false
-categories: [ "java", "language" ]
+categories: [ "language", "java" ]
 tags: [ "java", "프로그래밍" ]
 date: 2024-12-04 13:00:00 +0900
 image:
