@@ -237,7 +237,7 @@ int i = 1;
 ![java 형변환(source:techvidvan)](/assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/2024120302.png)
 
 > java 형 변환에 대해 자세한 내용이 궁금하시면, [이 글](/posts/java-type-conversion/)을 참고해주세요.
-{: .prompt-info }
+> {: .prompt-info }
 
 ### 조건문
 
@@ -502,15 +502,72 @@ public class Main {
 
 이 이상 차원도 구현은 가능하나, 실제로 많이 사용되지는 않는다. 추상적인 객체의 상태를 인지할 수 있으면 될 것 같다.
 
-### 클래스 접근제한자 메소드
+### 클래스와 객체, 인스턴스
+
+#### 기본구조
 
 ```java
-// 클래스의 기본
+/*
+  접근제한자 class 클래스명 {
+  필드들;
+  생성자들;
+  메서드들;
+ }
+ */
+```
+
+#### java API 를 활용하여 클래스를 만들고 사용하는 예제
+
+```java
+public class Dice {
+  int face;
+  int eye;
+
+  public void roll() {
+    // 주사위의 face 만큼 눈을 굴림
+    // (0부터 시작하기 때문에 1을 더해줌)
+    // double 타입으로 반환되기 때문에 int 형으로 변환
+    this.eye = (int) (random() * face) + 1;
+  }
+}
+
+
+public class DiceUser {
+  public static void main(String[] args) {
+    Dice dice = new Dice(); // 주사위 생성해서
+    dice.face = 6;
+    
+    dice.roll(); // 주사위 눈을 굴리고
+
+    System.out.println(dice.eye); // 확인
+  }
+}
+```
+
+* 위에 있는 `java.lang.Math`의 `random()` 함수는 static 형태로 제공되기 때문에 따로 객체를 생성하지않고 사용가능
+  * ![java의 math api random 함수](/assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/2024-12-05-14-15-00.png)
+  * [Math API 문서 링크](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)
+
+##### 생성자
+
+* 객체를 초기화 하는 메서드 > 객체가 생성될 때 딱 한 번 실행
+* 리턴타입 없음
+* 접근제한자 있음
+
+### 클래스와 배열의 활용
+
+```java
 public class ItemForArray {
 
   // 필드
   private int price;
   private String name;
+
+  // 생성자
+  public ItemForArray(int price, String name) {
+    this.price = price;
+    this.name = name;
+  }
 
   // 메서드 getter
   // 접근제한자 리턴타입 메서드명(매개변수들..){ ... }
@@ -532,25 +589,11 @@ public class ItemForArray {
   public void setName(String name) {
     this.name = name;
   }
-
-  // 생성자
-  public ItemForArray(int price, String name) {
-    this.price = price;
-    this.name = name;
-  }
 }
 
 ```
 
 * `setter`메서드는 일반적으로 외부에서 바꿀 수 없도록 하기 위해 없는 경우 존재
-
-#### 생성자
-
-* 객체를 초기화 하는 메서드 > 객체가 생성될 때 딱 한 번 실행
-* 리턴타입 없음
-* 접근제한자 있음
-
-### 클래스와 배열의 활용
 
 위에 작성한 `ItemForArray` 클래스 활용
 
@@ -599,4 +642,4 @@ int[] copyTo = Arrays.copyOf(copyFrom, copyFrom.length); // copyFrom 의 값을 
 ```
 
 > java 형 변환에 대해 자세한 내용이 궁금하시면, [이 글](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)을 참고해주세요.
-{: .prompt-info }
+> {: .prompt-info }
