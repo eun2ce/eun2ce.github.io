@@ -1,5 +1,5 @@
 ---
-title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] Java 프로그래밍 기초 - 가변인자(Varargs, 점 세개) 알아보기"
+title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] Java 프로그래밍 기초 - static, final, static final 차이"
 description: "static, final, static final 이 어떻게 다른지 정리한다."
 date: 2024-12-02 11:28:00 +0900
 categories: [ "external-experience", "likelion" ]
@@ -9,7 +9,7 @@ math: false
 mermaid: false
 image:
   path: /assets/img/posts/external-experience/likelion/2024-12-06-likelion-java-static-final-static-final/2024-12-06-11-48-18.png
-  alt: "[ 멋쟁이사자처럼 백엔드 스쿨 ] Java 프로그래밍 기초 - static, final, static final"
+  alt: "[ 멋쟁이사자처럼 백엔드 스쿨 ] Java 프로그래밍 기초 - static, final, static final 차이"
 ---
 
 수업한 내용들을 기록하지만 개인적으로 요약정리 한 내용들이 포함되어있을 수 있습니다.
