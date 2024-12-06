@@ -1,8 +1,8 @@
 ---
 title: "Java 형변환"
+date: 2024-12-03 16:00:00 +0900
 categories: [ "language", "java" ]
 tags: [ "java", "프로그래밍" ]
-date: 2024-12-03 16:00:00 +0900
 pin: false
 math: false
 mermaid: false

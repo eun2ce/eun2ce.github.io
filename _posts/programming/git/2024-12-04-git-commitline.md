@@ -1,11 +1,11 @@
 ---
 title: "[git] 커밋(commit) 잘 남기는 방법"
+date: 2024-12-04 16:00:00 +0900
+categories: [ "programming", "git" ]
+tags: [ "git", "commit" ,"programming" ]
 pin: false
 math: false
 mermaid: false
-categories: [ "programming", "git" ]
-tags: [ "git", "commit" ,"programming" ]
-date: 2024-12-04 16:00:00 +0900
 ---
 
 ## 커밋(commit) 구조

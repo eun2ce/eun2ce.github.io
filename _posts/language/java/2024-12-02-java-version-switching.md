@@ -1,8 +1,8 @@
 ---
 title: "Java 여러가지 버전을 함께 사용하는 방법"
+date: 2024-12-02 10:51:00 +0900
 categories: [ "language", "java" ]
 tags: [ "java", "프로그래밍" ]
-date: 2024-12-02 10:51:00 +0900
 pin: false
 math: false
 mermaid: false

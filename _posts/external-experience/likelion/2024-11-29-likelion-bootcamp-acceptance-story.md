@@ -1,8 +1,8 @@
 ---
 title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] 백엔드 java 부트캠프 13기 지원과 합격"
+date: 2024-11-29 15:06:00 +0900
 categories: [ "external-experience", "likelion" ]
 tags: [ "멋쟁이사자처럼", "후기" ]
-date: 2024-11-29 15:06:00 +0900
 pin: false
 math: false
 mermaid: false

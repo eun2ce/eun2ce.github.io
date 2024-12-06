@@ -1,12 +1,12 @@
 ---
 title: "[Spring Boot] H2 Database \"testdb\" not found, either pre-create it or allow remote database creation 해결"
 description: ""
+date: 2024-12-05 17:28:00 +0900
+categories: [ "programming", "spring" ]
+tags: [ "H2", "spring", "java", "programming" ]
 pin: false
 math: false
 mermaid: false
-categories: [ "programming", "spring" ]
-tags: [ "H2", "spring", "java", "programming" ]
-date: 2024-12-05 17:28:00 +0900
 image:
   path: /assets/img/posts/programming/spring/2024-12-05-spring-h2-database-not-found/2024-12-05-17-50-54.png
   alt: "[Spring Boot] H2 Database \"testdb\" not found, either pre-create it or allow remote database creation 해결"
