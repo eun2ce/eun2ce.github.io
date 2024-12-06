@@ -3,7 +3,7 @@ title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] Java 프로그래밍 기초"
 categories: [ "external-experience", "likelion" ]
 tags: [ "bootcamp", "java", "javac", "멋쟁이사자처럼", "부트캠프", "프로그래밍" ]
 date: 2024-12-02 11:28:00 +0900
-last_modified_at: 2024-12-05 16:30:00 +0900
+last_modified_at: 2024-12-06 11:13:00 +0900
 pin: false
 math: false
 mermaid: false
@@ -651,3 +651,5 @@ int[] copyTo = Arrays.copyOf(copyFrom, copyFrom.length); // copyFrom 의 값을 
 
 > java 형 변환에 대해 자세한 내용이 궁금하시면, [이 글](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)을 참고해주세요.
 > {: .prompt-info }
+
+배열 이후부터는 디테일하게 다루고싶기 때문에 필요한 내용들을 위주로 구분해 작성한다.
