@@ -77,6 +77,6 @@ public class Question {
 
 ![img](/assets/img/posts/programming/spring/2024-12-05-spring-h2-database-not-found/2024-12-05-17-51-29.png)
 
-정상적으로 실행되고 원하는 경로에 db 파일이 생성 된 것을 확인할 수 있다.
+정상적으로 실행되고 경로에 db 파일이 생성 된 것을 확인할 수 있다.
 
 ![img](/assets/img/posts/programming/spring/2024-12-05-spring-h2-database-not-found/2024-12-05-17-50-54.png)
