@@ -21,6 +21,31 @@ mermaid: false
 
 특정 주기로 블로그 글을 가져올 수 있도록하려면 아래와 같은 작업이 필요합니다.
 
+### main.py 작성
+
+```python
+import feedparser, datetime
+
+uri="https://eun2ce.tistory.com"
+feed = feedparser.parse(uri+"/rss")
+
+markdown_text = """# eun2ce.tistory.com
+## blog posts
+"""
+
+lst = []
+
+
+for i in feed['entries']:
+    dt = datetime.datetime.strptime(i['published'], "%a, %d %b %Y %H:%M:%S %z").strftime("%b %d, %Y")
+    markdown_text += f"[{i['title']}]({i['link']}) - {dt}<br>\n"
+    print(i['link'], i['title'])
+
+f = open("README.md",mode="w", encoding="utf-8")
+f.write(markdown_text)
+f.close()
+```
+
 ### 생성한 레포지토리에서 Actions 클릭
 
 ![actions](/assets/img/posts/programming/git/2024-12-04-git-using-gitaction-with-tistory/2024-12-06-15-18-00.png)
