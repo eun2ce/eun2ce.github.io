@@ -92,6 +92,13 @@ jobs:
         git push
 ```
 
+### git action 권한 추가
+
+레포지토리에서 아래의 옵션을 켜주어야, git action 이 readme.md 파일에 글을 쓸 수 있는 권한을 갖습니다.
+
+`settings` > `actions` > `general` > `Workflow permissions` > `Read and write permissions` 체크 후 저장
+
+### 결과
 `actions` > `tistory uploader` 에 들어가면 다음과 같이 블로그 글이 업로드 된 것을 확인할 수 있습니다.
 
 ![result](/assets/img/posts/programming/git/2024-12-04-git-using-gitaction-with-tistory/2024-12-06-15-38-59.png)
