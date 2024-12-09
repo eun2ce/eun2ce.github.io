@@ -1,5 +1,5 @@
 ---
-title: "[git] tistory 블로그 글 github 에 올리는 방법"
+title: "[git] tistory 블로그 글 git action 을 이용해 github 에 올리는 방법"
 description: "git Action 을 이용한 블로그와 github 동기화하는 방법을 다룹니다."
 date: 2024-12-06 15:32:00 +0900
 categories: [ "programming", "git" ]
@@ -7,6 +7,9 @@ tags: [ "blog", "crawl", "crawling", "git", "python", "tistory", "깃", "깃헙"
 pin: false
 math: false
 mermaid: false
+image:
+  path: /assets/img/posts/programming/git/2024-12-04-git-using-gitaction-with-tistory/2024-12-06-15-18-00.png
+  alt: "블로그 글 git action 사용하여 github 에 업로드 하기"
 ---
 
 블로그 포스팅을 `github`에 자동으로 올리는 방법을 알아보려고 합니다. 이 글은 `tistory` 블로그를 기준으로 설명합니다.
