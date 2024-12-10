@@ -6,9 +6,9 @@ tags: [ "constant pool", "string", "java", "프로그래밍" ]
 pin: false
 math: false
 mermaid: false
-image:
-  path: /assets/img/posts/language/java/2024-12-10-java-string-constant-pool/2024-12-10-16-14-11.png
-  alt: "Java String 과 String Constant Pool"
+#image:
+#  path: /assets/img/posts/language/java/2024-12-10-java-string-constant-pool/2024-12-10-16-14-11.png
+#  alt: "Java String 과 String Constant Pool"
 ---
 
 Java 에서 **String Pool**은 문자열을 효율적으로 관리하기 위한 메모리 영역입니다.  
@@ -70,7 +70,7 @@ String e = "Java";
 System.out.println(d == e); // true, 같은 객체를 참조
 ```
 
-![inter method](/assets/img/posts/language/java/2024-12-10-java-string-constant-pool/2024-12-10-16-14-11.png)
+[//]: # (![inter method]&#40;/assets/img/posts/language/java/2024-12-10-java-string-constant-pool/2024-12-10-16-14-11.png&#41;)
 
 
 이와 같은 방식으로 `String Pool`은 Java 의 문자열 처리에 있어 중요한 역할을 하며, 메모리와 성능을 최적화하는 데 도움을 줍니다.
