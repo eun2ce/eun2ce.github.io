@@ -22,6 +22,8 @@ script_includes:
     {% endif %}
 
     <div class="post-meta text-muted">
+      <div class="d-flex justify-content-between">
+
       <!-- published date -->
       <span>
         {{ site.data.locales[lang].post.posted }}
@@ -35,6 +37,11 @@ script_includes:
           {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
         </span>
       {% endif %}
+
+      <div style="vertical-align: bottom;">
+        {% include post-view.html %}
+      </div>
+    </div>
 
       {% if page.image %}
         {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
