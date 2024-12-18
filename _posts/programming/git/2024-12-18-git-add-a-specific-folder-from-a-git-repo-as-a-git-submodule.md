@@ -1,7 +1,7 @@
 ---
 title: "[git] git submodule - repo 의 특정 폴더를 다른 repo 하위 모듈로 추가하는 방법"
 description: "git Action 을 이용한 블로그와 github 동기화하는 방법을 다룹니다."
-date: 2024-12-06 15:32:00 +0900
+date: 2024-12-18 10:47:00 +0900
 categories: [ "programming", "git" ]
 tags: [ "blog", "crawl", "crawling", "git", "python", "tistory", "깃", "깃헙", "블로그", "크롤링" ]
 pin: false
