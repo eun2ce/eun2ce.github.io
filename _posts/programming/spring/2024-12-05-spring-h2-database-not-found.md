@@ -13,7 +13,7 @@ image:
 ---
 
 > Database "testdb" not found, either pre-create it or allow remote database creation (not recommended in secure environments) [90149-232] 90149/90149 (Help)
-> {: .prompt-danger}
+{: .prompt-danger}
 
 * H2 version: `2.3.232`
 * Spring Boot: `3.4.0`
@@ -28,7 +28,7 @@ H2 버전을 1.4.197 이하로 낮추면 되지만(일반적으로 `1.4.193` 을
 
 수동 데이터베이스 파일 생성은 
 > 수동으로 데이터베이스 파일을 생성하는 방법에 대해 자세한 내용이 궁금하시면, [이 글](https://h2database.com/html/tutorial.html#creating_new_databases)을 참고해주세요.
-> {: .prompt-info }
+{: .prompt-info }
 
 ### 더미 Entitiy 생성으로 Db 생성 유도
 

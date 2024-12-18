@@ -59,7 +59,7 @@ System.out.println(a == c); // false, 서로 다른 객체를 참조
 ### Intern 메서드
 
 > 아 이런 방법이 있구나 인지만 하되, 실제로 사용하는 것은 권장하지 않음
-> {: .prompt-danger }
+{: .prompt-danger }
 
 `String` 클래스의 `intern()` 메서드를 사용하면 `String Pool`에 문자열을 추가할 수 있습니다.  
 만약 같은 문자열이 `String Pool`에 이미 존재하면 해당 객체의 참조를 반환하고, 없으면 새로 추가합니다.

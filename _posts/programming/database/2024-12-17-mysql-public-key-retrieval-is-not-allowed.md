@@ -9,7 +9,7 @@ mermaid: false
 ---
 
 > Public key retrieval is not allowed
-> {: .prompt-danger }
+{: .prompt-danger }
 
 사용하는 버전의 mysql 이 8.x 버전 이상 일 경우 아래와 같은 옵션을 확인해야 합니다.
 

@@ -32,7 +32,7 @@ mermaid: false
 * IllgelArgumentException: 메서드 허가 불가 또는 부적절한 argument 를 받은 경우
 
 > 예외는 오류와 다르게 개발자가 임의로 예외 시킬 수 있음
-> {: .prompt-info }
+{: .prompt-info }
 
 특정 예외처리에 따라 이 구분이 절대적이지 않지만 일반적으로 사용하는 Exception 과 Error 의 사용 용도는 위와 같습니다.
 

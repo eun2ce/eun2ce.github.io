@@ -17,7 +17,7 @@ double distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 그러나 실제로 좌표를 비교할 때 `==` 연산자를 사용하게 되는데 `double`, `float`는 오차가 발생할 수 있다.
 
 > 백준은 왜인지 모르겠는데 풀리지만 절대 권장하는 방법은 아니다.
-> {: .prompt-danger }
+{: .prompt-danger }
 
 이유는 부동소수점 타입이 **근사치**로 처리되기 때문
 

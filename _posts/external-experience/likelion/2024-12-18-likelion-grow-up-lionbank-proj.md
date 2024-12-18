@@ -11,10 +11,9 @@ image:
   alt: "docker-compose 로 MySQL 활용하기: 은행 사용자 정보 저장"
 ---
 
-> 최근 프로젝트에서 `Docker-Compose`를 활용해 `MySQL`을 띄우고, 은행 사용자와 계좌 정보를 저장하는 시스템을 구축해보았습니다.
-> 초기 설정부터 문제 해결 과정까지 경험한 내용을 공유합니다.
-> 특히, 초기화 `SQL 스크립트(init.sql)`가 제대로 실행되지 않았던 문제와 그 해결 과정을 중점적으로 다룹니다.
-> {: .prompt-info }
+최근 프로젝트에서 `Docker-Compose`를 활용해 `MySQL`을 띄우고, 은행 사용자와 계좌 정보를 저장하는 시스템을 구축해보았습니다.
+초기 설정부터 문제 해결 과정까지 경험한 내용을 공유합니다.
+특히, 초기화 `SQL 스크립트(init.sql)`가 제대로 실행되지 않았던 문제와 그 해결 과정을 중점적으로 다룹니다.
 
 ## 개요
 
@@ -144,7 +143,7 @@ $ docker-compose down
 * 디렉토리 초기화
 
 > `init.sql` 파일을 삭제하지 않도록 주의
-> {: .prompt-danger }
+{: .prompt-danger }
 
 ```bash
 $ tree database/.
@@ -213,4 +212,3 @@ mysql> show tables;
 ![docker_container_logs](/assets/img/posts/external-experience/likelion/2024-12-18-likelion-grow-up-lionbank-proj/2024-12-18-09-37-11.png)
 
 > git repo [https://github.com/eun2ce/likelion/tree/main/lionbank](https://github.com/eun2ce/likelion/tree/main/lionbank)
-> {: .prompt-info }

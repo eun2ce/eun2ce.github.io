@@ -237,7 +237,7 @@ int i = 1;
 ![java 형변환(source:techvidvan)](/assets/img/posts/external-experience/likelion/2024-12-03-likelion-basic-java/2024120302.png)
 
 > java 형 변환에 대해 자세한 내용이 궁금하시면, [이 글](/posts/java-type-conversion/)을 참고해주세요.
-> {: .prompt-info }
+{: .prompt-info }
 
 ### 조건문
 
@@ -650,6 +650,6 @@ int[] copyTo = Arrays.copyOf(copyFrom, copyFrom.length); // copyFrom 의 값을 
 ```
 
 > java 형 변환에 대해 자세한 내용이 궁금하시면, [이 글](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)을 참고해주세요.
-> {: .prompt-info }
+{: .prompt-info }
 
 배열 이후부터는 디테일하게 다루고싶기 때문에 필요한 내용들을 위주로 구분해 작성한다.
