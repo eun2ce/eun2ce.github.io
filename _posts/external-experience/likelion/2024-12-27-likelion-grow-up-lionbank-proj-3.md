@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/external-experience/likelion/2024-12-24-likelion-grow-up-lionbank-proj-2/2024-12-24-16-24-59.png
+  path: /assets/img/posts/external-experience/likelion/2024-12-24-likelion-grow-up-lionbank-proj-3/2024-12-27-15-34-07.png
   alt: "은행 시스템 개선: thread & logging 기능 추가"
 ---
 
