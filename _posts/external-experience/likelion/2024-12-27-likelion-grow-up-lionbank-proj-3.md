@@ -1,6 +1,6 @@
 ---
 title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] 은행 시스템 개선: thread & logging 기능 추가"
-date: 2024-12-24 16:24:00 +0900
+date: 2024-12-27 16:24:00 +0900
 categories: [ "external-experience", "likelion" ]
 tags: [ "bootcamp", "java", "멋쟁이사자처럼", "부트캠프", "프로그래밍" ]
 pin: false
@@ -64,7 +64,7 @@ public class FileReaderTask extends Thread {
 
 아래와 같은 내용이 `log.txt` 파일에 남는다.
 
-![fetch logfile](/assets/img/posts/external-experience/likelion/2024-12-24-likelion-grow-up-lionbank-proj-3/2024-12-27-15-34-07.png)
+![fetch logfile](/assets/img/posts/external-experience/likelion/2024-12-27-likelion-grow-up-lionbank-proj-3/2024-12-27-15-34-07.png)
 
 > 자세한 패치 내용은 [이 곳](https://github.com/eun2ce/likelion/commit/d6aeb14027b493a5b92c5ea5361933f6854f9173)을 참고해주세요.
 {: .prompt-info}
