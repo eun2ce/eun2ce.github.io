@@ -12,7 +12,7 @@ image:
 ---
 
 > 학습을 목표로 자바 프로젝트를 진행하고 있습니다.
-{: .prompt-info }
+{: .prompt-info}
 
 file read, write 기능을 활용한 은행 오픈, 마감 기능 추가
 
@@ -67,4 +67,4 @@ public class FileReaderTask extends Thread {
 ![fetch logfile](/assets/img/posts/external-experience/likelion/2024-12-24-likelion-grow-up-lionbank-proj-3/2024-12-27-15-34-07.png)
 
 > 자세한 패치 내용은 [이 곳](https://github.com/eun2ce/likelion/commit/d6aeb14027b493a5b92c5ea5361933f6854f9173)을 참고해주세요.
-{ : .prompt-info }
+{: .prompt-info}

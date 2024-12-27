@@ -23,7 +23,6 @@ image:
 | **사용 용도**  | 간단한 입력 처리에 적합    | 대량 데이터나 고성능 입력 처리에 적합 |
 | **유연성**    | 정규식 기반 파싱 지원     | 직접 파싱 필요 (더 유연함)      |
 
-
 ### 비교
 
 ```java
@@ -31,37 +30,39 @@ import java.io.*;
 import java.util.Scanner;
 
 public class InputSpeedComparison {
-    public static void main(String[] args) throws IOException {
-        // 입력 데이터를 생성
-        StringBuilder mockInput = new StringBuilder();
-        for (int i = 1; i <= 100000; i++) {
-            mockInput.append(i).append("\n");
-        }
-        String inputData = mockInput.toString();
 
-        // Scanner 방식
-        long scannerStartTime = System.currentTimeMillis();
-        Scanner scanner = new Scanner(new StringReader(inputData));
-        while (scanner.hasNextLine()) {
-            int num = Integer.parseInt(scanner.nextLine());
-        }
-        scanner.close();
-        long scannerEndTime = System.currentTimeMillis();
-
-        // BufferedReader 방식
-        long bufferedReaderStartTime = System.currentTimeMillis();
-        BufferedReader bufferedReader = new BufferedReader(new StringReader(inputData));
-        String line;
-        while ((line = bufferedReader.readLine()) != null) {
-            int num = Integer.parseInt(line);
-        }
-        bufferedReader.close();
-        long bufferedReaderEndTime = System.currentTimeMillis();
-
-        // 결과 출력
-        System.out.println("Scanner 방식 처리 시간: " + (scannerEndTime - scannerStartTime) + "ms");
-        System.out.println("BufferedReader 방식 처리 시간: " + (bufferedReaderEndTime - bufferedReaderStartTime) + "ms");
+  public static void main(String[] args) throws IOException {
+    // 입력 데이터를 생성
+    StringBuilder mockInput = new StringBuilder();
+    for (int i = 1; i <= 100000; i++) {
+      mockInput.append(i).append("\n");
     }
+    String inputData = mockInput.toString();
+
+    // Scanner 방식
+    long scannerStartTime = System.currentTimeMillis();
+    Scanner scanner = new Scanner(new StringReader(inputData));
+    while (scanner.hasNextLine()) {
+      int num = Integer.parseInt(scanner.nextLine());
+    }
+    scanner.close();
+    long scannerEndTime = System.currentTimeMillis();
+
+    // BufferedReader 방식
+    long bufferedReaderStartTime = System.currentTimeMillis();
+    BufferedReader bufferedReader = new BufferedReader(new StringReader(inputData));
+    String line;
+    while ((line = bufferedReader.readLine()) != null) {
+      int num = Integer.parseInt(line);
+    }
+    bufferedReader.close();
+    long bufferedReaderEndTime = System.currentTimeMillis();
+
+    // 결과 출력
+    System.out.println("Scanner 방식 처리 시간: " + (scannerEndTime - scannerStartTime) + "ms");
+    System.out.println(
+      "BufferedReader 방식 처리 시간: " + (bufferedReaderEndTime - bufferedReaderStartTime) + "ms");
+  }
 }
 ```
 
@@ -94,5 +95,7 @@ BufferedReader 방식 처리 시간: 30ms
       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 ```
 
-> 자세한 변경 사항은 [이 곳](https://github.com/eun2ce/likelion/commit/f7bbbb45328aaf07677353e390677d06bda5cf8e)을 참고해주세요.
-> {: .prompt-info }
+> 자세한 변경
+> 사항은 [이 곳](https://github.com/eun2ce/likelion/commit/f7bbbb45328aaf07677353e390677d06bda5cf8e)을
+> 참고해주세요.
+> {: .prompt-info}
