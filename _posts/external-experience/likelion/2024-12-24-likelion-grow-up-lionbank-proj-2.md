@@ -1,5 +1,5 @@
 ---
-title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] Scanner 를 BufferedReader 로 변환: 은행 시스템 개선"
+title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] 은행 시스템 개선: Scanner 를 BufferedReader 로 변환"
 date: 2024-12-24 16:24:00 +0900
 categories: [ "external-experience", "likelion" ]
 tags: [ "bootcamp", "java", "멋쟁이사자처럼", "부트캠프", "프로그래밍" ]
@@ -8,7 +8,7 @@ math: false
 mermaid: false
 image:
   path: /assets/img/posts/external-experience/likelion/2024-12-24-likelion-grow-up-lionbank-proj-2/2024-12-24-16-24-59.png
-  alt: "Scanner 를 BufferedReader 로 변환: 은행 시스템 개선"
+  alt: "은행 시스템 개선: Scanner 를 BufferedReader 로 변환"
 ---
 
 > 학습을 목표로 자바 프로젝트를 진행하고 있습니다.
