@@ -65,7 +65,7 @@ CSRF 보호로 인해 H2 콘솔 접근 시 403 오류가 발생 H2 콘솔 경로
 > CSRF 는 사용자가 의도하지 않는 요청을 막기 위한 기능입니다.
 > [spring docs](https://docs.spring.io/spring-security/reference/features/exploits/csrf.html#csrf) 에
 > 좋은 내용이 있어 첨부합니다.
-> { : .prompt-info }
+{: .prompt-info}
 
 ```
 http.csrf().ignoringRequestMatchers("/h2-console/**");
