@@ -7,8 +7,8 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: (/assets/img/posts/external-experience/project/
-  alt: "spring boot 와 java 를 이용한 게시판 만들기"
+  path: /assets/img/posts/external-experience/project/2024-12-27-project-sbb-simple-springboot-board/2024-12-27-13-30-27.png
+0  alt: "spring boot 와 java 를 이용한 게시판 만들기"
 ---
 
 > 이 프로젝트는 점프투스트링부트(Jump to Spring Boot) 책을 통해 진행한 SBB(SpringBoot Board) 프로젝트입니다.
