@@ -1,14 +1,11 @@
 ---
-title: "Java String 과 String Constant Pool"
+title: "[java] String 과 String Constant Pool"
 date: 2024-12-10 16:03:00 +0900
 categories: [ "language", "java" ]
 tags: [ "constant pool", "string", "java", "프로그래밍" ]
 pin: false
 math: false
 mermaid: false
-#image:
-#  path: /assets/img/posts/language/java/2024-12-10-java-string-constant-pool/2024-12-10-16-14-11.png
-#  alt: "Java String 과 String Constant Pool"
 ---
 
 Java 에서 **String Pool**은 문자열을 효율적으로 관리하기 위한 메모리 영역입니다.  

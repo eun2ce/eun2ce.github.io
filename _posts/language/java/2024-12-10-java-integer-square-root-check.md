@@ -1,5 +1,5 @@
 ---
-title: "Java 두 원의 위치관계 비교"
+title: "[java] 두 원의 위치관계 비교"
 date: 2024-12-10 11:50:00 +0900
 categories: [ "language", "java" ]
 tags: [ "1002", "백준", "알고리즘", "java" ]

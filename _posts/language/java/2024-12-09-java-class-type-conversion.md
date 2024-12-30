@@ -1,5 +1,5 @@
 ---
-title: "Java Class 형변환"
+title: "[java] Class 형변환"
 description: "형변환(type conversion)은 캐스팅(casting) 이라고도 불립니다. java 에서의 class 형 변환에 대해 알아봅니다."
 date: 2024-12-09 17:02:00 +0900
 categories: [ "language", "java" ]

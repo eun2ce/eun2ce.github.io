@@ -1,5 +1,5 @@
 ---
-title: "Java 추상 클래스와 인터페이스 차이"
+title: "[java] 추상 클래스와 인터페이스 차이"
 date: 2024-12-10 15:05:00 +0900
 categories: [ "language", "java" ]
 tags: [ "abstract class", "interface", "java", "인터페이스", "추상클래스" ]
