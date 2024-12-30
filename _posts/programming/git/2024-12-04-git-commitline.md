@@ -29,7 +29,7 @@ mermaid: false
 | ci       | ci 관련 설정 수정               |
 | docs     | 문서 수정                     |
 | style    | 코드 스타일 혹은 포맷              |
-| refactor | 코드 리팩토링                   |
+| refactor | 코드 리팩터링                   |
 | test     | 테스트 코드 수정                 |
 | perf     | 성능 개선                     |
 
