@@ -1,5 +1,5 @@
 ---
-title: "[java] `adapter` 패턴에 대해"
+title: "[java] adapter 패턴에 대해"
 date: 2024-12-30 15:16:00 +0900
 categories: [ "language", "java" ]
 tags: [ "adapter Pattern", "constant pool", "java", "프로그래밍" ]

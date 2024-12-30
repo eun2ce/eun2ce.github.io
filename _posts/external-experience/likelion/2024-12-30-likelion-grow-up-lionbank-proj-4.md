@@ -1,5 +1,5 @@
 ---
-title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] 은행 시스템 개선: `stream`과 `enum`을 활용한 메뉴 조회 기능 리팩토링"
+title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] 은행 시스템 개선: stream 과 enum 을 활용한 메뉴 조회 기능 리팩토링"
 date: 2024-12-30 11:47:00 +0900
 categories: [ "external-experience", "likelion" ]
 tags: [ "bootcamp", "java", "멋쟁이사자처럼", "부트캠프", "프로그래밍" ]
@@ -8,7 +8,7 @@ math: false
 mermaid: false
 image:
   path: /assets/img/posts/external-experience/likelion/2024-12-27-likelion-grow-up-lionbank-proj-4/2024-12-30-11-48-30.png
-  alt: "은행 시스템 개선: `stream`과 `enum`을 활용한 메뉴 조회 기능 리팩토링"
+  alt: "은행 시스템 개선: stream 과 enum 을 활용한 메뉴 조회 기능 리팩토링"
 ---
 
 > 학습을 목표로 자바 프로젝트를 진행하고 있습니다.
