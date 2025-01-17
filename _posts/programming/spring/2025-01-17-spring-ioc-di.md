@@ -195,7 +195,7 @@ public class UserService {
 }
 ```
 
-#### Constructor-Based DI (생성자 기반 의존성 주입) (<span style="color:#C0FFFF"> recommended</span>)
+#### Constructor-Based DI (생성자 기반 의존성 주입) (<span style="color:red"> recommended</span>)
 
 ```java
 @Service
