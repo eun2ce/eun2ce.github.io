@@ -76,7 +76,7 @@ Error: Process completed with exit code 1.
 
 ### build.gradle 확인
 
-위와 같이 작성되어 있어야 아래 파일에서 USERNAME, TOKEN 정보를 받아 workflow가 정상동작 할 수 있습니다.
+위와 같이 작성되어 있어야 아래 파일에서 USERNAME, TOKEN 정보를 받아 `workflow`가 정상동작 할 수 있습니다.
 
 ```groovy
 // build.gradle
