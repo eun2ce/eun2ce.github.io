@@ -40,8 +40,7 @@ Bean은 Spring IoC Container에 의해 관리되는 자바 객체 입니다.
 
 즉, 제어의 역전이라 함은 아래와 같이 정리할 수 있습니다.
 
-> 객체간의 연관관계(의존성,생명주기)를 `java code`로 `class` 파일 안에서 객체가 능동적으로 할 수 있게 하지 않고, 의존관계를 사전에 명시한 다음 그 객체를 `BeanFactory`에 `bean`으로 등록하여 스프링 IoC 컨테이너가 할 수 있게 위임한다.
-{: .prompt-info }
+##### <span style="background-color:#fff5b1">객체간의 연관관계(의존성,생명주기)를 `java code`로 `class` 파일 안에서 객체가 능동적으로 할 수 있게 하지 않고, 의존관계를 사전에 명시한 다음 그 객체를 `BeanFactory`에 `bean`으로 등록하여 스프링 IoC 컨테이너가 할 수 있게 위임한다. </span>
 
 간단한 예시를 살펴봅니다.
 
