@@ -124,3 +124,5 @@ public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
 이 `Aspect`설정에 따라 `Weaving(위빙)`이 처리가 됩니다.
 
 > weaving: `Pointcut`에 의해서 결정된 타겟의 `Join Point`에 부가기능(Advice)를 삽입하는 과정
+
+전체 코드 예제는 [GitHub](https://github.com/eun2ce/likelion/tree/main/aop)에서 확인할 수 있습니다.

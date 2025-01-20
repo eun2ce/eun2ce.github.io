@@ -40,8 +40,9 @@ java 8 이전에는 Optional이라는 클래스가 없어 메서드의 리턴 �
 Optional은 **리턴 타입의 용도로 제한적으로 사용**되도록 설계되었습니다. 
 
 > API Note:
-> Optional is primarily intended for use as a method return type where there is a clear need to represent “no result,” and where using null is likely to cause errors. A variable whose type is Optional should never itself be null; it should always point to an Optional instance.
-> 메서드가 반환할 결과값이 ‘없음’을 명백하게 표현할 필요가 있고, null을 반환하면 에러를 유발할 가능성이 높은 상황에서 메서드의 반환 타입으로 Optional을 사용하자는 것이 Optional을 만든 주된 목적이다. Optional 타입의 변수의 값은 절대 null이어서는 안 되며, 항상 Optional 인스턴스를 가리켜야 한다.
+> Optional is primarily intended for use as a method return type where there is a clear need to represent “no result,” and where using null is likely to cause errors. A variable whose type is Optional should never itself be null; it should always point to an Optional instance.  
+> 메서드가 반환할 결과값이 ‘없음’을 명백하게 표현할 필요가 있고, null을 반환하면 에러를 유발할 가능성이 높은 상황에서 메서드의 반환 타입으로 Optional을 사용하자는 것이 Optional을 만든 주된 목적이다.  
+> Optional 타입의 변수의 값은 절대 null이어서는 안 되며, 항상 Optional 인스턴스를 가리켜야 한다.
 
 > 자세한 내용은 [이 곳](https://docs.oracle.com/javase/9/docs/api/java/util/Optional.html)을 참고하세요.
 {: .prompt-info}
