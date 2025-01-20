@@ -8,7 +8,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/programming/spring/2025-01-20-spring-mvc-aop
+  path: /assets/img/posts/programming/spring/2025-01-20-spring-mvc-aop/_spring-mvc-architecture.webp
   alt: "[Spring] Spring MVC"
 ---
 
