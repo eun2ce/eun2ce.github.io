@@ -16,11 +16,13 @@ Bean은 Spring IoC Container에 의해 관리되는 자바 객체 입니다.
 이 객체들은 Spring이 생성, 초기화, 소멸 등을 **관리**하며, 개발자는 객체의 생명 주기를 직접 관리할 필요가 사라집니다.
 즉, 스프링은 개발자가 생성한 설정 파일(xml <bean/>)이나 어노테이션(@Component)을 읽어 빈을 생성합니다.
 
-* Bean의 이름은 컨테이너 안에서 유일성을 가져야 합니다. (한 컨테이너 안에 aService라는 빈이 2개 이상일 수 없음) 컨테이너가 빈을 찾지 못할 경우에는 @Qualifier를 통해 스프링 컨테이너가 주입할 빈을 알려줄 수 있습니다.
+* Bean의 이름은 컨테이너 안에서 유일성을 가져야 합니다. (한 컨테이너 안에 aService라는 빈이 2개 이상일 수 없음) 컨테이너가 빈을 찾지 못할 경우에는
+  @Qualifier를 통해 스프링 컨테이너가 주입할 빈을 알려줄 수 있습니다.
   * [NoUniqueBeanDefinitionException 발생 시 요령](https://www.baeldung.com/spring-qualifier-annotation)
 
 개발자가 객체를 관리하지 않고, Spring IoC 컨테이너에게 위임하고,
-특정 클래스(Controller, Service, Repository)만 빈으로 등록하는 이유는 **IoC (Inversion of Control, 제어의 역전)** 때문이라고 할 수 있습니다.
+특정 클래스(Controller, Service, Repository)만 빈으로 등록하는 이유는 **IoC (Inversion of Control, 제어의 역전)** 때문이라고 할
+수 있습니다.
 
 ## IoC와 DI
 
@@ -29,7 +31,8 @@ Bean은 Spring IoC Container에 의해 관리되는 자바 객체 입니다.
 * DI(Dependency Injection, 의존성 주입): 객체 간의 의존관계를 주입
   * e.g) User 객체의 생성자 안에 name 인자
 * 제어: 객체(object)간의 의존관계를 설정하고 생명주기(생성, 소멸)를 관리하는 행위
-* IoC(Inversion of Control, 제어의 역전): 객체 (class 안에서)가 능동적으로 제어하지 않고 수동적으로 다른 것으로부터 제어를 당할 수 있게 **제어 행위 주체를 역전**시킴
+* IoC(Inversion of Control, 제어의 역전): 객체 (class 안에서)가 능동적으로 제어하지 않고 수동적으로 다른 것으로부터 제어를 당할 수 있게 **제어
+  행위 주체를 역전**시킴
 
 ##### IoC는 DI가 아니며, IoC는 객체 간의 의존 관계와 제어를 외부로 위임하는 개념이고, DI는 그 구현 방식 중 하나일 뿐입니다.
 
@@ -37,10 +40,11 @@ Bean은 Spring IoC Container에 의해 관리되는 자바 객체 입니다.
 
 객체를 빈(bean)으로 등록하고, 의존성을 명시해 주면 스프링 IoC 컨테이너가 개발자 대신 의존성 주입을 해줍니다. (이것을 제어의 역전이라 함)
 
-
 즉, 제어의 역전이라 함은 아래와 같이 정리할 수 있습니다.
 
-##### <span style="background-color:#fff5b1">객체간의 연관관계(의존성,생명주기)를 `java code`로 `class` 파일 안에서 객체가 능동적으로 할 수 있게 하지 않고, 의존관계를 사전에 명시한 다음 그 객체를 `BeanFactory`에 `bean`으로 등록하여 스프링 IoC 컨테이너가 할 수 있게 위임한다. </span>
+##### <span style="background-color:#fff5b1">객체간의 연관관계(의존성,생명주기)를 `java code`로
+`class` 파일 안에서 객체가 능동적으로 할 수 있게 하지 않고, 의존관계를 사전에 명시한 다음 그 객체를 `BeanFactory`에
+`bean`으로 등록하여 스프링 IoC 컨테이너가 할 수 있게 위임한다. </span>
 
 간단한 예시를 살펴봅니다.
 
@@ -76,6 +80,7 @@ public class Student {
 @Configuration
 @ComponentScan(basePackageClasses = Student.class)
 public class AppConfig {
+
   @Bean
   public Major getMajor() {
     return new Major("CS");
@@ -88,17 +93,22 @@ public class AppConfig {
 ```java
 ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 Student student = context.getBean("student", Student.class);
-student.getMajor().getName();  // CS
+student.
+
+getMajor().
+
+getName();  // CS
 ```
 
 실제로 VO 클래스는 스프링 빈으로 잘 등록하지 않기때문에 의의가 있는 예제를 하나 더 작성합니다.
 
 ```java
 public class UserController {
+
   @RequestMapping("/")
   @ResponseBody
-  public void test()  {
-    UserRepository userRepository =  new UserRepository();
+  public void test() {
+    UserRepository userRepository = new UserRepository();
     UserService userService = new UserService(userRepository);
 
     userService.viewMember();
@@ -116,6 +126,7 @@ public class UserService {
 }
 
 public class UserRepository {
+
 }
 ```
 
@@ -131,25 +142,26 @@ public class UserRepository {
 ```java
 public class UserController {
 
-    @Autowired // 의존성 주입
-    private UserService userService;
+  @Autowired // 의존성 주입
+  private UserService userService;
 
-    @RequestMapping("/")
-    @ResponseBody
-    public void test()  {
-       userService.viewMember();
-    }
+  @RequestMapping("/")
+  @ResponseBody
+  public void test() {
+    userService.viewMember();
+  }
 }
 
 @Service // 빈 등록
 public class UserService {
 
-    @Autowired // 의존성 주입
-    private UserRepository userRepository;
+  @Autowired // 의존성 주입
+  private UserRepository userRepository;
 }
 
 @Repository // 빈 등록
 public class UserRepository {
+
 }
 ```
 
@@ -166,12 +178,13 @@ public class UserRepository {
 #### 필드
 
 ```java
+
 @Service
 public class UserService {
 
-    @Autowired 
-    private UserRepository userRepository;
-    
+  @Autowired
+  private UserRepository userRepository;
+
 }
 ```
 
@@ -182,15 +195,16 @@ public class UserService {
   * 방지를 위해서는 default 값 설정할 것
 
 ```java
+
 @Service
 public class UserService {
 
-    private UserRepository userRepository;
+  private UserRepository userRepository;
 
-    @Autowired
-    public void setUserRepository(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+  @Autowired
+  public void setUserRepository(UserRepository userRepository) {
+    this.userRepository = userRepository;
+  }
 
 }
 ```
@@ -198,15 +212,16 @@ public class UserService {
 #### Constructor-Based DI (생성자 기반 의존성 주입) (<span style="color:red"> recommended</span>)
 
 ```java
+
 @Service
 public class UserService {
 
-    private UserRepository userRepository;
+  private UserRepository userRepository;
 
-    @Autowired
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+  @Autowired
+  public UserService(UserRepository userRepository) {
+    this.userRepository = userRepository;
+  }
 }
 ```
 
@@ -217,32 +232,34 @@ public class UserService {
 * 의존 객체 not null (NullPointerException 방지)
 
 ```java
+
 @Service
 public class UserService {
 
-    private final UserRepository userRepository; // final
+  private final UserRepository userRepository; // final
 
-    @Autowired
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository; // service가 repository 참조
-    }
+  @Autowired
+  public UserService(UserRepository userRepository) {
+    this.userRepository = userRepository; // service가 repository 참조
+  }
 }
 
 @Repository
 public class UserRepository {
 
-    private final UserService userService;
-    
-    @Autowired
-    public UserRepository(UserService userService) {
-        this.userService = userService; // 서비스 시작 시 The dependencies of some of the beeans in the application context form a cycle 에러 발생
-    }
+  private final UserService userService;
+
+  @Autowired
+  public UserRepository(UserService userService) {
+    this.userService = userService; // 서비스 시작 시 The dependencies of some of the beeans in the application context form a cycle 에러 발생
+  }
 }
 ```
 
 ## 결론
 
-Spring에서 **Bean**은 IoC 컨테이너가 관리하는 객체입니다. **IoC**는 객체의 생명주기와 의존성 관계를 외부 컨테이너에 맡기는 개념이고, **DI**는 그 구현 방식으로, 의존성을 자동으로 주입해주는 방법입니다.
+Spring에서 **Bean**은 IoC 컨테이너가 관리하는 객체입니다. **IoC**는 객체의 생명주기와 의존성 관계를 외부 컨테이너에 맡기는 개념이고, **DI**는 그 구현
+방식으로, 의존성을 자동으로 주입해주는 방법입니다.
 
 ### 마치며
 
