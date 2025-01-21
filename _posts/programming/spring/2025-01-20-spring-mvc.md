@@ -8,7 +8,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/programming/spring/2025-01-20-spring-mvc/spring-mvc.webp
+  path: /assets/img/posts/programming/spring/2025-01-20-spring-mvc/springmvc.webp
   alt: "[Spring] Spring MVC가 무엇인지 알아보고 실습해보기"
 ---
 
