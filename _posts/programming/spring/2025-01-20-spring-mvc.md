@@ -1,5 +1,5 @@
 ---
-title: "[Spring] Spring MVC가 무엇인지 알아보고 실습해보기"
+title: "[spring] Spring MVC가 무엇인지 알아보고 실습해보기"
 description: "MVC 패턴은 애플리케이션을 개발할 때 사용하는 디자인 패턴입니다. 이 내용에 대해 자세히 다루고 실습해보는 과정을 요약합니다."
 date: 2025-01-20 20:28:00 +0900
 categories: [ "programming", "spring" ]

@@ -1,5 +1,5 @@
 ---
-title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] 은행 시스템 개선: stream 과 enum 을 활용한 메뉴 조회 기능 리팩터링"
+title: "[멋쟁이사자처럼 백엔드 스쿨] 은행 시스템 개선: stream 과 enum 을 활용한 메뉴 조회 기능 리팩터링"
 date: 2024-12-30 11:47:00 +0900
 categories: [ "external-experience", "likelion" ]
 tags: [ "bootcamp", "java", "멋쟁이사자처럼", "부트캠프", "프로그래밍" ]

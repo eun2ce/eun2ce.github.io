@@ -1,5 +1,5 @@
 ---
-title: "[Spring data JPA] No EntityManager with actual transaction available for current thread - cannot reliably process 'persist' call 해결"
+title: "[spring data jpa] No EntityManager with actual transaction available for current thread - cannot reliably process 'persist' call 해결"
 description: ""
 date: 2025-01-21 10:08:00 +0900
 categories: [ "programming", "spring" ]

@@ -1,5 +1,5 @@
 ---
-title: "[Spring] IoC와 DI: 스프링에서의 객체 관리의 핵심 개념"
+title: "[spring] IoC와 DI: 스프링에서의 객체 관리의 핵심 개념"
 description: ""
 date: 2025-01-17 13:52:00 +0900
 categories: [ "programming", "spring" ]

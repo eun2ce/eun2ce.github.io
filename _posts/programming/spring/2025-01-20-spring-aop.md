@@ -1,5 +1,5 @@
 ---
-title: "[Spring] AOP"
+title: "[spring] AOP"
 description: ""
 date: 2025-01-20 17:30:00 +0900
 categories: [ "programming", "spring" ]

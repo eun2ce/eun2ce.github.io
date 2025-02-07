@@ -1,5 +1,5 @@
 ---
-title: "[Github Actions] Could not PUT 'https://maven.pkg.github.com/xxx....jar'. Received status code 401 from server: Unauthorized"
+title: "[github actions] Could not PUT 'https://maven.pkg.github.com/xxx....jar'. Received status code 401 from server: Unauthorized"
 description: "git Actions 에서 배포 시 401 에러에 대해 다룹니다."
 date: 2024-12-18 10:47:00 +0900
 categories: [ "programming", "git" ]

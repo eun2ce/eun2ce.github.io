@@ -1,5 +1,5 @@
 ---
-title: "[ 멋쟁이사자처럼 백엔드 스쿨 ] docker-compose 로 MySQL 활용하기: 은행 사용자 정보 저장"
+title: "[멋쟁이사자처럼 백엔드 스쿨] docker-compose 로 MySQL 활용하기: 은행 사용자 정보 저장"
 date: 2024-12-18 09:39:00 +0900
 categories: [ "external-experience", "likelion" ]
 tags: [ "bootcamp", "java", "멋쟁이사자처럼", "부트캠프", "프로그래밍" ]
