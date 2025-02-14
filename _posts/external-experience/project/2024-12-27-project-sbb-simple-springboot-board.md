@@ -62,9 +62,7 @@ http.authorizeHttpRequests().requestMatchers("/**").permitAll();
 
 CSRF 보호로 인해 H2 콘솔 접근 시 403 오류가 발생 H2 콘솔 경로에 대해서만 CSRF 검증을 비활성화
 
-> CSRF 는 사용자가 의도하지 않는 요청을 막기 위한 기능입니다.
-> [spring docs](https://docs.spring.io/spring-security/reference/features/exploits/csrf.html#csrf) 에
-> 좋은 내용이 있어 첨부합니다.
+> CSRF 는 사용자가 의도하지 않는 요청을 막기 위한 기능입니다. [spring docs](https://docs.spring.io/spring-security/reference/features/exploits/csrf.html#csrf) 에 좋은 내용이 있어 첨부합니다.
 {: .prompt-info}
 
 ```
@@ -82,7 +80,7 @@ http.headers().addHeaderWriter(new XFrameOptionsHeaderWriter(XFrameOptionsHeader
 ## `gmail`에서 사용자 인증 및 보안 관련 문제
 
 > javax.mail.AuthenticationFailedException
-> { : .prompt-danger }
+{ : .prompt-danger }
 
 검색해보면 `보안 수준이 낮은 앱에 대한 액세스`설정을 이용한 방법이 많은데, 찝찝하기도하고 이런 해결방법은 내가 생각하는 방향이 아니었다.
 

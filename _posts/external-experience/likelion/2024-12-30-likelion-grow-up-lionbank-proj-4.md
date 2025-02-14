@@ -12,7 +12,7 @@ image:
 ---
 
 > 학습을 목표로 자바 프로젝트를 진행하고 있습니다.
-> {: .prompt-info}
+{: .prompt-info}
 
 `Java`로 개발하다 보면 데이터를 필터링하거나 정렬하는 작업은 빈번하게 발생합니다.  
 특히 반복문(forEach)을 사용하는 경우가 많지만, 더 선언적이고 간결한 방식으로 이를 처리할 방법(`Stream API`와 `Enum`)을 메뉴 조회 기능에 적용시키고 이를
@@ -58,7 +58,5 @@ public static Menu findNameByValue(int value) {
 
 코드 변경 시 성능 차이가 크지 않다면, 가독성과 유지보수성을 우선적으로 고려하자.
 
-> 자세한 패치
-> 내용은 [이 곳](https://github.com/eun2ce/likelion/commit/bba1206be98473906e3d0f3b562be87ce3fa4919)을
-> 참고해주세요.
-> {: .prompt-info}
+> 자세한 패치 내용은 [이 곳](https://github.com/eun2ce/likelion/commit/bba1206be98473906e3d0f3b562be87ce3fa4919)을 참고해주세요.
+{: .prompt-info}

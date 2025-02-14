@@ -12,7 +12,7 @@ image:
 ---
 
 > 학습을 목표로 자바 프로젝트를 진행하고 있습니다.
-> {: .prompt-info }
+{: .prompt-info }
 
 `Scanner`와 `BufferedReader`에 대해 아래와 같은 차이점을 알게 되었습니다.
 
@@ -95,7 +95,5 @@ BufferedReader 방식 처리 시간: 30ms
       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 ```
 
-> 자세한 변경
-> 사항은 [이 곳](https://github.com/eun2ce/likelion/commit/f7bbbb45328aaf07677353e390677d06bda5cf8e)을
-> 참고해주세요.
-> {: .prompt-info}
+> 자세한 변경 사항은 [이 곳](https://github.com/eun2ce/likelion/commit/f7bbbb45328aaf07677353e390677d06bda5cf8e)을 참고해주세요.
+{: .prompt-info}
