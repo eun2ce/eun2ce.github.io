@@ -151,7 +151,7 @@ wrapper 에서는 뷰에서 request 인스턴스를 수신하고, 해당 메서�
 
 엔드포인트는 주로 pk 정보가 필요없는 list, create 를 수행하는 뷰와 pk 정보가 필요한 detail, update, delete 를 수행하는 view 두가지 정도가 될 수 있습니다.
 
-# ModelSerializer 
+# ModelSerializer
 
 앞서 보았던 Serializer 는 각 필드를 하나씩 정의해주어야 했습니다. 그러한 번거로움을 해결하기 위해 나온 것이 ModelSerializer 입니다.
 ModelSerializer 는 크게 아래와 같은 기능 세가지를 제공합니다.
@@ -197,7 +197,7 @@ class ArticleSerializer(serializers.ModelSerializer):
 
 ## Nested RelationShips
 
-앞서 언급했던 것 처럼 ForeignKey 필드를 사용하고자 할 때, 기본적으로 아무 설정이 없다면  참조하고 있는 pk 값을 가져옵니다.
+앞서 언급했던 것 처럼 ForeignKey 필드를 사용하고자 할 때, 기본적으로 아무 설정이 없다면 참조하고 있는 pk 값을 가져옵니다.
 만약 pk 값 이외의 다른 값을 가져오고 싶다면 아래와 같은 메서드를 이용할 수 있습니다.
 
 ### String of related object (StringRelatedField)
@@ -213,3 +213,97 @@ class ArticleSerializer(serializers.ModelSerializer):
 
 > 자세한 사항은 [이 곳](https://www.django-rest-framework.org/api-guide/serializers/#customizing-field-mappings)을 참고해주세요.
 {: .prompt-info}
+
+# GenericAPIView 와 Mixins
+
+* drf 에서는 GenericAPIView 에 list, create 등 다양한 믹스인 클래스를 결합해 APIView 를 구현할 수 있습니다.
+* GenericAPIView 는 CRUD 에서 **공통적으로 사용되는 속성**을 제공하고, Mixin 은 **CRUD 중 특정 기능을 수행하는 메서드**를 제공합니다.
+* GenericAPIView 와 Mixins 으로 정확한 기능 구현이 어려운 경우, 커스터마이징 하여 사용할 수 있습니다.
+
+## GenericAPIView
+
+```python
+from rest_framework import generics
+from rest_framework import mixins
+
+from ebooks.models import Ebook
+from ebooks.api.serializers import EbookSerializer
+
+class EbookListCreateAPIView(mixins.ListModelMixin,
+                             mixins.CreateModelMixin,
+                             generics.GenericAPIView):
+
+    queryset = Ebook.objects.all()
+    serializer_class = EbookSerializer
+
+    def get(self, request, *args, **kwargs):
+        return self.list(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
+```
+
+## basic settings
+
+다음 속성들을 통해 view 를 컨트롤 합니다.
+
+* queryset: view 에서 객체를 반환하는 데 사용해야하는 쿼리셋
+  * 반드시
+    1) queryset 속성을 설정하거나
+    2) get_queryset() 메서드로 override 하여 사용해야 합니다
+* serializer_class: 입력된 값을 validate 하거나 deserialize 하거나, 출력값을 serialize 할 때 사용하는 serializer 클래스입니다.
+  * 일반적으로
+    1) 이 속성을 설정하거나
+    2) get_serializer_class() 메서드로 override 하여 사용해야 합니다.
+* lookup_field: 개별 모델 인스턴스의 object 조회를 수행할 때 사용해야 하는 모델 필드 입니다.
+  * 기본 값은 `pk` 하이퍼링크 된 api 에 custom 값을 사용해야 하는 경우 api views 와 serializer 클래스가 lookup field 를 설정해야 합니다.
+
+## pagination
+
+### pagination_class
+
+리스트 결과들을 페이지네이션 할 때 사용합니다.
+default 는 DEFAULT_PAGINATION_CLASS(`rest_framework.pagination.PageNumberPagination` 모듈안에) 세팅으로 결정됩니다.
+
+## filtering
+
+### filter_backends
+
+> A list of filter backend classes that should be used for filtering the queryset. Defaults to the same value as the
+> DEFAULT_FILTER_BACKENDS setting.
+
+## 주요 mixins
+
+django 에서 mixins 를 사용하지 않는다면 모든 기능을 view 에 직접, 반복적으로 구현해야 합니다.
+하지만 api 를 작업할 때 목록을 보여주거나, CRUD 등은 항상 사용되고 반복적인 일이 일어납니다.
+
+따라서 이런 반복적인 기능을 하나의 Mixin 클래스로 제공한다면 반복적인 일은 줄어들고 가독성, 생산성을 높여줄 수 있습니다.
+
+단, mixin 클래스에 존재하는 메서드나 속성을 상속받는 클래스에서 사용할 경우 mixin 클래스의 메서드가 오버라이딩되어 의도치 않게 작동할 수 있으니 주의해야 합니다.
+
+* ListModelMixin
+  * queryset 을 listing 하는 메서드
+  * `.list(request, *args, **kargs)` 메서드 호출로 사용
+* CreateModelMixin
+  * 모델 인스턴스를 생성하고 저장하는 mixin
+* RetrieveModelMixin
+  * 존재하는 모델 인스턴스를 리턴
+* UpdateModelMixin
+  * 모델 인스턴스를 수정하여 저장
+* DestroyModelMixin
+  * 모델 인스턴스를 삭제
+
+> 더 많은 내용을 알고싶다면 [이 곳](https://www.django-rest-framework.org/api-guide/generic-views/#mixins)을 참고하세요. 
+{: .prompt-info }
+
+> Qna  
+> view > APIView > GenericAPIView 는 무슨 차이가 있는가 ?
+> * view: django 기본 view 로 json 처리 기능이 없고 html 을 반환해줍니다.
+> * APIView: DRF 의 기본 view 로 request, response 객체 사용이 가능하고 인증/권한/스크롤링을 지원합니다.
+> * GenericAPIView: APIView 의 확장으로 queryset, serializer_class get_object() get_queryset() 등과 같은 헬퍼 메서드를 지원합니다.
+
+
+
+
+
+
