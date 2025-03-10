@@ -1,6 +1,6 @@
 ---
 title: "[django] django rest framework 에 대해"
-date: 2025-02-14 15:51:00 +0900
+date: 2025-02-14 15:52:00 +0900
 categories: [ "programming", "django" ]
 tags: [ "community", "django", "drf", "python", "programming" ]
 pin: false

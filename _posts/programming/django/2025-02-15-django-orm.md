@@ -1,6 +1,6 @@
 ---
 title: "[django] sql 을 이해하고 django ORM 사용하기"
-date: 2025-02-15 20:01:00 +0900
+date: 2025-02-15 20:03:00 +0900
 categories: [ "programming", "django" ]
 tags: [ "community", "django", "python", "programming", "prefetch_related", "select_related" ]
 pin: false
