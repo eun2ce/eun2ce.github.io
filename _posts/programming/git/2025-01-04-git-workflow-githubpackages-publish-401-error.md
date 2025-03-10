@@ -3,7 +3,7 @@ title: "[github actions] Could not PUT 'https://maven.pkg.github.com/xxx....jar'
 description: "git Actions 에서 배포 시 401 에러에 대해 다룹니다."
 date: 2024-12-18 10:47:00 +0900
 categories: [ "programming", "git" ]
-tags: [ "401", "Git", "Github Actions", "Unauthorized", "깃", "깃헙", "오류" ]
+tags: [ "401", "git", "github actions", "unauthorized", "깃", "깃헙", "오류" ]
 pin: false
 math: false
 mermaid: false
