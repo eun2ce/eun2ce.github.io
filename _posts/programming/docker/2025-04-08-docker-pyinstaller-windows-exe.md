@@ -8,10 +8,12 @@ math: false
 mermaid: false
 ---
 
+> 예제코드가 필요하다면 [https://github.com/eun2ce/pyinstaller-cross-build](https://github.com/eun2ce/pyinstaller-cross-build)을 참고하세요.
+{: .prompt-info }
+
 Docker를 활용해 macOS 환경에서 Windows 실행파일(.exe)을 생성할 수 있는 방법을 정리합니다.  
 빌드 과정을 자동화하고, `requirements.txt` 및 `.spec` 파일을 포함한 구조를 통해  
 재사용 가능한 형태로 구성합니다.
-
 
 ## 개요
 
