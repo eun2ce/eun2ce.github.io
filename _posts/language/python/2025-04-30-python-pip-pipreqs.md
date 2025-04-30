@@ -1,6 +1,6 @@
 ---
 title: "[python] Conda 환경의 불필요한 패키지 없이 요구사항 파일 생성하기: pipreqs 활용 가이드"
-date: 2025-02-07 13:00:00 +0900
+date: 2025-04-30 14:00:00 +0900
 categories: [ "language", "python" ]
 tags: [ "algorithm", "function", "python", "사용법", "프로그래밍" ]
 pin: false
