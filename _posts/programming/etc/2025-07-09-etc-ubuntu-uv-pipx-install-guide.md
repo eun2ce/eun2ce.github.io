@@ -8,105 +8,71 @@ math: false
 mermaid: false
 ---
 
-# 소개
+Ubuntu 2x.04 LTS에서 [uv](https://github.com/astral-sh/uv)를 `pipx`를 사용하여 설치하는 방법을 간단히 정리합니다.
 
-[`uv`](https://github.com/astral-sh/uv)는 Rust로 작성된 고성능 Python 패키지 매니저입니다. Python 프로젝트의 의존성 설치 속도를 획기적으로 개선하며, PEP 508/517/518 을 따릅니다.
+## 사전 조건
 
-이 가이드에서는 `pipx`를 통해 시스템 전체에 영향 없이 `uv`를 설치하고 사용하는 방법을 설명합니다.
+- Python 3.10 이상이 설치되어 있어야 합니다.
+- 루트(root) 계정 또는 `sudo` 권한
 
 ---
 
-# 1. pipx 설치
+## 설치 순서
 
-먼저 `pipx`를 설치합니다:
+### 1. 패키지 업데이트 및 pipx 설치
 
 ```bash
 sudo apt update
-sudo apt install python3-pip python3-venv -y
-
-pip install --user pipx
-python3 -m pipx ensurepath
+sudo apt install python3-pip -y
+sudo apt install pipx -y
 ```
 
-```bash
-# 쉘 재시작 후, 적용 확인
-exec $SHELL
-```
-
-설치 확인:
-
-```bash
-pipx --version
-```
+> `pipx`는 python 패키지를 격리된 환경에서 설치해주는 실행기입니다.
 
 ---
 
-# 2. uv 설치
+### 2. uv 설치
 
 ```bash
 pipx install uv
 ```
 
-설치 경로 확인:
+설치 후 아래와 같은 메시지가 나올 수 있습니다:
+
+```
+Note: '/root/.local/bin' is not on your PATH environment variable.
+```
+
+이 경우 다음 단계를 진행합니다.
+
+---
+
+### 3. PATH 설정
 
 ```bash
-which uv
+pipx ensurepath
+source ~/.bashrc
+```
+
+또는 새로운 터미널을 열어야 적용됩니다.
+
+---
+
+### 4. 설치 확인
+
+```bash
 uv --version
 ```
 
-> uv는 `pip`, `virtualenv`, `pip-tools`, `pip-audit` 등을 통합한 대체 도구입니다.
+설치가 완료되었으면 `uv` 버전이 출력됩니다.
 
 ---
 
-# 3. uv 기본 사용법
+## 참고
 
-## 가상환경 생성 및 활성화
-
-```bash
-uv venv
-source .venv/bin/activate
-```
-
-## 패키지 설치
+- `pipx`는 가상 환경을 자동으로 생성해주기 때문에 `uv` 외 다른 CLI 도구를 설치할 때도 유용합니다.
+- root 사용자일 경우 `~/.bashrc` 대신 `/root/.bashrc`를 사용합니다.
 
 ```bash
-uv pip install requests
+source /root/.bashrc
 ```
-
-## requirements.txt 생성
-
-```bash
-uv pip freeze > requirements.txt
-```
-
----
-
-# 4. 기존 프로젝트에 적용
-
-기존 프로젝트에 적용 예시:
-
-```bash
-cd my_project/
-uv venv
-source .venv/bin/activate
-uv pip install -r requirements.txt
-```
-
----
-
-# 요약
-
-| 항목             | 설명                                      |
-|------------------|-------------------------------------------|
-| 패키지 관리자    | uv (`pip`, `venv`, `pip-tools` 대체)     |
-| 설치 방식        | `pipx`로 글로벌 설치                      |
-| 가상환경 생성    | `uv venv`                                 |
-| 의존성 설치      | `uv pip install -r requirements.txt`      |
-| 요구사항 저장    | `uv pip freeze > requirements.txt`        |
-
----
-
-# 참고 링크
-
-- https://github.com/astral-sh/uv
-- https://pypa.github.io/pipx/
