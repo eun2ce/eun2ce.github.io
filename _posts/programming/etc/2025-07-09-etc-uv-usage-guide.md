@@ -8,125 +8,75 @@ math: false
 mermaid: false
 ---
 
-# 소개
+Python 프로젝트에서 [uv](https://github.com/astral-sh/uv) 를 사용해 개발/테스트 의존성을 효율적으로 관리하는 방법을 정리합니다.  
+[PEP 621](https://peps.python.org/pep-0621/) 기반의 `pyproject.toml` 구조를 기준으로 설명합니다.
 
-[`uv`](https://github.com/astral-sh/uv)는 Python의 종합 패키지 관리 툴입니다. 기존 `pip`, `pip-tools`, `virtualenv`, `pip-audit` 등을 통합하여 **빠르고 안전한 패키지 관리**를 제공합니다. Rust로 작성되어 매우 빠르며, `PEP 508/517/518`을 완벽하게 지원합니다.
+# pyproject.toml 예시
 
----
+```toml
+[project]
+name = "my-app"
+version = "0.1.0"
+description = "Example Python application using uv"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    # 예: "requests>=2.31.0", "pydantic>=2.6.0"
+]
 
-# 설치
-
-## pipx를 통해 설치
-
-```bash
-pipx install uv
+[dependency-groups]
+dev = ["ipykernel>=6.29.5", "ruff>=0.11.13"]
+test = ["pytest>=8.0.0", "pytest-asyncio>=0.23.0", "httpx>=0.27.0"]
 ```
 
-또는 수동 설치:
+# 설치 명령어
 
-```bash
-curl -Ls https://astral.sh/uv/install.sh | bash
-```
-
-설치 확인:
-
-```bash
-uv --version
-```
-
----
-
-# 주요 기능 요약
-
-| 기능            | 설명                                         |
-|-----------------|----------------------------------------------|
-| `uv venv`       | 가상환경 생성 (`python -m venv` 대체)       |
-| `uv pip`        | pip 대체, 패키지 설치                        |
-| `uv pip freeze` | 의존성 목록 저장 (`requirements.txt` 등)    |
-| `uv pip sync`   | lock 기반 재현 설치 (pip-tools 기능)         |
-| `uv pip audit`  | 보안 취약점 검사 (`pip-audit` 대체)         |
-| `uv pip index`  | PyPI mirror 설정 등                          |
-
----
-
-# 사용법
-
-## 1. 가상환경 생성 및 활성화
-
-```bash
-uv venv
-source .venv/bin/activate
-```
-
-## 2. 패키지 설치
-
-```bash
-uv pip install requests pandas
-```
-
-## 3. 패키지 제거
-
-```bash
-uv pip uninstall pandas
-```
-
-## 4. requirements.txt 저장
-
-```bash
-uv pip freeze > requirements.txt
-```
-
-## 5. requirements.txt로 설치
+## 기본 설치
 
 ```bash
 uv pip install -r requirements.txt
+# 또는 pyproject.toml 기반 설치
+uv pip install .
 ```
 
-## 6. 보안 감사
+## 개발 환경용 패키지 설치 (`[dev]` 그룹)
 
 ```bash
-uv pip audit
+uv pip install --dev
 ```
 
----
-
-# 고급 기능
-
-## sync 설치 (lock 기반 재현성 확보)
-
-`uv`는 `pip-tools`처럼 `requirements.lock.txt` 를 기반으로 환경을 재현할 수 있습니다.
+또는 `uv add` 명령으로 직접 추가:
 
 ```bash
-uv pip sync requirements.txt
+uv add --dev ipykernel ruff
 ```
 
-## PyPI 미러 변경
+## 테스트 환경용 패키지 설치 (`[test]` 그룹)
 
 ```bash
-uv pip index set https://pypi.org/simple
+uv pip install --group test
 ```
 
-## 캐시 비우기
+또는 개별 패키지 추가:
 
 ```bash
-uv cache clean
+uv add --group test pytest pytest-asyncio httpx
 ```
 
----
+# 주요 명령 요약
 
-# 자주 사용하는 커맨드 정리
+| 명령어                            | 설명                                     |
+|----------------------------------|------------------------------------------|
+| `uv add`                         | 의존성 추가                              |
+| `uv add --dev foo`              | 개발용(dev) 패키지 추가                  |
+| `uv add --group test bar`       | 테스트(test) 그룹 패키지 추가            |
+| `uv pip install --dev`          | dev 그룹 패키지 일괄 설치                |
+| `uv pip install --group test`   | test 그룹 패키지 일괄 설치               |
+| `uv pip sync`                   | `pyproject.lock` 기준 설치 동기화        |
+| `uv pip update`                 | 패키지 최신 버전으로 업그레이드         |
 
-```bash
-uv venv                       # 가상환경 생성
-uv pip install -r req.txt    # 패키지 설치
-uv pip freeze > req.txt      # 의존성 저장
-uv pip sync req.txt          # lock 기반 설치
-uv pip audit                 # 보안 점검
-```
+# 기타 참고
 
----
+- `uv`는 Poetry나 Pipenv보다 훨씬 빠른 설치 속도와 캐시 전략을 갖고 있음.
+- 그룹별 의존성을 명확히 구분하면 CI/CD 및 로컬 개발 환경 구성에서 편리함.
 
-# 참고 링크
-
-- https://github.com/astral-sh/uv
-- https://astral.sh/blog/posts/introducing-uv/
