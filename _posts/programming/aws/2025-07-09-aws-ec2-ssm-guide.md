@@ -1,6 +1,6 @@
 ---
 title: "[aws] EC2 인스턴스에 SSM(Session Manager) 설정하기"
-date: 2025-07-09 14:00:00 +0900
+date: 2025-07-09 13:22:00 +0900
 categories: ["aws", "ec2"]
 tags: ["aws", "ec2", "session-manager", "ssm", "iam", "보안"]
 pin: false
