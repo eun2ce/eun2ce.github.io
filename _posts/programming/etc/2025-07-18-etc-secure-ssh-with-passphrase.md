@@ -58,7 +58,7 @@ Host github-eun2ce
 (base) ubuntu@a100-80g-4:~/.ssh$ eval "$(ssh-agent -s)"
 Agent pid {pid}
 (base) ubuntu@a100-80g-4:~/.ssh$ ssh-add ~/.ssh/joeun2ce
-Identity added: /home/ubuntu/.ssh/joeun2ce (eun2ce.infofla@gmail.com)
+Identity added: /home/ubuntu/.ssh/joeun2ce (eun2ce.xxx@gmail.com)
 ```
 
 ### 사용
