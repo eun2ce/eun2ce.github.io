@@ -1,7 +1,7 @@
 ---
 title: "[멋쟁이사자처럼 백엔드 스쿨] Java 프로그래밍 기초 - overloading vs overriding"
 date: 2024-12-09 16:30:00 +0900
-categories: [ "ect", "project" ]
+categories: [ "etc", "project" ]
 tags: [ "bootcamp", "overloading", "overriding", "java", "javac", "멋쟁이사자처럼", "부트캠프", "프로그래밍" ]
 pin: false
 math: false

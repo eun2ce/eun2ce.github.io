@@ -1,7 +1,7 @@
 ---
 title: "[멋쟁이사자처럼 백엔드 스쿨] Java 프로그래밍 기초 - 오류(Error) 와 예외 (Exception) 의 차이"
 date: 2024-12-11 15:45:00 +0900
-categories: [ "ect", "project" ]
+categories: [ "etc", "project" ]
 tags: [ "bootcamp", "error", "exception", "java", "멋쟁이사자처럼", "부트캠프", "예외처리", "프로그래밍" ]
 pin: false
 math: false

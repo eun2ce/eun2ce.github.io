@@ -1,7 +1,7 @@
 ---
 title: "[멋쟁이사자처럼 백엔드 스쿨] 은행 시스템 개선: Scanner 를 BufferedReader 로 변환"
 date: 2024-12-24 16:24:00 +0900
-categories: [ "ect", "project" ]
+categories: [ "etc", "project" ]
 tags: [ "bootcamp", "java", "멋쟁이사자처럼", "부트캠프", "프로그래밍" ]
 pin: false
 math: false

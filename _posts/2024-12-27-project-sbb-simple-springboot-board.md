@@ -1,7 +1,7 @@
 ---
 title: "[toy project] spring boot 와 java 를 이용한 게시판 만들기"
 date: 2024-12-27 13:01:00 +0900
-categories: [ "ect", "project" ]
+categories: [ "etc", "project" ]
 tags: [ "java", "project", "프로그래밍" ]
 pin: false
 math: false
