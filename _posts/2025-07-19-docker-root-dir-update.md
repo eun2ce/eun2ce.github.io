@@ -1,5 +1,5 @@
 ---
-title: "[Docker] root 디렉토리 변경"
+title: "[docker/trubleshooting] root 디렉토리 변경"
 date: 2025-07-19:00 13:00:00 +0900
 categories: [ "ops", "docker" ]
 tags: ["root", "docker", "ops", "trubleshooting"]
