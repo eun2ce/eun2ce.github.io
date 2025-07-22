@@ -26,5 +26,9 @@
   // Run tasks in macOS
   "terminal.integrated.profiles.osx": {
     "zsh": { "path": "/bin/zsh", "args": ["-l", "-i"] }
-  }
+  },
+  "pasteImage.defaultName": "Y-MM-DD-HH-mm-ss",
+  "pasteImage.insertPattern": "![](/assets/img/posts/${fileName})",
+  "pasteImage.path": "${projectRoot}/assets/img/posts",
+  "pasteImage.forceUnixStyleSeparator": true
 }
