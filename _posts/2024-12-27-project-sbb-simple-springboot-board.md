@@ -114,7 +114,7 @@ spring.mail.properties.mail.smtp.starttls.enable=true
 
 비밀번호를 변경할 수 있습니다.
 
-![change pw](/assets/img/posts/-2024-12-27-project-sbb-simple-springboot-board/2024-12-27-14-24-48.png)
+![change pw](/assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-14-24-48.png)
 
 * 패스워드 변경 시 이메일 인증이 필요하며, 확인 된 사용자만 패스워드 변경이 이루어 집니다.
   ![change pa (with.email)](/assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-14-25-08.png)
