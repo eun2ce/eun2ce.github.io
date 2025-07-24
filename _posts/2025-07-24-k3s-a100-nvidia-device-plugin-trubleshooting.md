@@ -101,3 +101,63 @@ Allocatable:
 - NVIDIA plugin은 버전과 환경변수가 민감
 - 호스트 라이브러리를 컨테이너에 마운트하는 건 glibc 충돌로 이어질 수 있음
 - 공식 YAML 그대로 쓰는 게 제일 빠름
+
+
+## 비고
+
+### 사용한 최종 nvidia value yaml
+
+```yaml
+# nvidia-device-plugin.yml
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: nvidia-device-plugin-daemonset
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      name: nvidia-device-plugin-ds
+  updateStrategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        name: nvidia-device-plugin-ds
+    spec:
+      runtimeClassName: nvidia
+      nodeSelector:
+        gpu: nvidia
+      tolerations:
+        - key: nvidia.com/gpu
+          operator: Exists
+          effect: NoSchedule
+      priorityClassName: "system-node-critical"
+      containers:
+        - image: nvcr.io/nvidia/k8s-device-plugin@sha256:964847cc3fd85ead286be1d74d961f53d638cd4875af51166178b17bba90192f
+          name: nvidia-device-plugin-ctr
+          env:
+            - name: FAIL_ON_INIT_ERROR
+              value: "false"
+            - name: MIG_STRATEGY
+              value: mixed
+            - name: DEVICE_DISCOVERY_STRATEGY
+              value: volume-mounts
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+          volumeMounts:
+            - name: device-plugin
+              mountPath: /var/lib/kubelet/device-plugins
+            - name: nvidia-dev
+              mountPath: /dev
+              readOnly: true
+      volumes:
+        - name: device-plugin
+          hostPath:
+            path: /var/lib/kubelet/device-plugins
+        - name: nvidia-dev
+          hostPath:
+            path: /dev
+```
