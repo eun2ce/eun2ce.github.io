@@ -1,7 +1,7 @@
 ---
 title: "[ubuntu] pipx로 uv 패키지 매니저 설치 및 설정 (Ubuntu 22.04)"
 date: 2025-07-09 13:20:00 +0900
-categories: [ "etc", "devops", "python" ]
+categories: [ "etc", "else" ]
 tags: [ "uv", "pipx", "python", "virtualenv", "ubuntu", "venv" ]
 pin: false
 math: false

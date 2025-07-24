@@ -1,7 +1,7 @@
 ---
 title: "[python] uv 사용법 완벽 정리"
 date: 2025-07-09 13:21:00 +0900
-categories: [ "etc", "devops", "python" ]
+categories: [ "etc", "else" ]
 tags: [ "uv", "pip", "venv", "dependency", "python-package" ]
 pin: false
 math: false
