@@ -1,5 +1,5 @@
 ---
-title: "[fastapi/trubleshooting] fastapi + playwirght NotImplementedError"
+title: "[fastapi/trubleshooting] fastapi + playwright NotImplementedError"
 description: "fastapi에서 asyncio 하위 프로세스를 실행하면 구현되지 않은 오류가 발생"
 date: 2025-07-24 15:32:00 +0900
 categories: [ "etc", "else" ]
