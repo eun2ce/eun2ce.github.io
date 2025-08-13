@@ -8,7 +8,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-12-04-git-using-gitaction-with-tistory-2024-12-06-15-18-00.wepb
+  path: /assets/img/posts/2024-12-04-git-using-gitaction-with-tistory-2024-12-06-15-18-00.webp
   alt: "블로그 글 git action 사용하여 github 에 업로드 하기"
 ---
 
@@ -18,7 +18,7 @@ image:
 
 블로그 글을 남길 레포지토리를 생성합니다.
 
-![repository 생성](/assets/img/posts/2024-12-04-git-using-gitaction-with-tistory-2024-12-06-15-10-00.wepb)
+![repository 생성](/assets/img/posts/2024-12-04-git-using-gitaction-with-tistory-2024-12-06-15-10-00.webp)
 
 ## git actions 생성
 
@@ -51,7 +51,7 @@ f.close()
 
 ### 생성한 레포지토리에서 Actions 클릭
 
-![actions](/assets/img/posts/2024-12-04-git-using-gitaction-with-tistory-2024-12-06-15-18-00.wepb)
+![actions](/assets/img/posts/2024-12-04-git-using-gitaction-with-tistory-2024-12-06-15-18-00.webp)
 
 ### workflow 파일 작성
 
@@ -104,12 +104,12 @@ jobs:
 ### 결과
 `actions` > `tistory uploader` 에 들어가면 다음과 같이 블로그 글이 업로드 된 것을 확인할 수 있습니다.
 
-![result](/assets/img/posts/2024-12-04-git-using-gitaction-with-tistory-2024-12-06-15-38-59.wepb)
+![result](/assets/img/posts/2024-12-04-git-using-gitaction-with-tistory-2024-12-06-15-38-59.webp)
 
 
 작성 한 내용이 어떻게 나타나는지 확인하려면 actions 에서 `tistory uploader`를 클릭하면 됩니다.
 
-![check](/assets/img/posts/2024-12-04-git-using-gitaction-with-tistory-2024-12-06-15-26-38.wepb)
+![check](/assets/img/posts/2024-12-04-git-using-gitaction-with-tistory-2024-12-06-15-26-38.webp)
 
 ## example
 

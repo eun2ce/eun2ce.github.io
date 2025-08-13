@@ -8,7 +8,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-12-05-spring-h2-database-not-found-2024-12-05-17-50-54.wepb
+  path: /assets/img/posts/2024-12-05-spring-h2-database-not-found-2024-12-05-17-50-54.webp
   alt: "[Spring Boot] H2 Database \"testdb\" not found, either pre-create it or allow remote database creation 해결"
 ---
 
@@ -70,11 +70,11 @@ public class Question {
 
 ### test connection
 
-![img](/assets/img/posts/2024-12-05-spring-h2-database-not-found-2024-12-05-17-52-27.wepb)
+![img](/assets/img/posts/2024-12-05-spring-h2-database-not-found-2024-12-05-17-52-27.webp)
 성공
 
 ### connection
 
 정상적으로 실행되고 경로에 db 파일이 생성 된 것을 확인할 수 있다.
 
-![img](/assets/img/posts/2024-12-05-spring-h2-database-not-found-2024-12-05-17-50-54.wepb)
+![img](/assets/img/posts/2024-12-05-spring-h2-database-not-found-2024-12-05-17-50-54.webp)

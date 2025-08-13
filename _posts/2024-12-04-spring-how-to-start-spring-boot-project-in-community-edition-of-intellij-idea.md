@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-12-04-spring-how-to-start-spring-boot-project-in-community-edition-of-intellij-idea-2024120403.wepb
+  path: /assets/img/posts/2024-12-04-spring-how-to-start-spring-boot-project-in-community-edition-of-intellij-idea-2024120403.webp
   alt: "[intellij] community 에서 spring boot 프로젝트 설정하는 방법"
 ---
 
@@ -20,7 +20,7 @@ community 버전에는 spring initializr 가 따로 없어 그 방법을 메모�
 
 ## 프로젝트 설정
 
-![spring initializr 설정](/assets/img/posts/2024-12-04-spring-how-to-start-spring-boot-project-in-community-edition-of-intellij-idea-2024120401.wepb)
+![spring initializr 설정](/assets/img/posts/2024-12-04-spring-how-to-start-spring-boot-project-in-community-edition-of-intellij-idea-2024120401.webp)
 
 * group: 프로젝트 정의 및 구분하는데에 필요한 식별자
   * 예: org.apache.maven, org.apache.commons
@@ -38,10 +38,10 @@ community 버전에는 spring initializr 가 따로 없어 그 방법을 메모�
 $ unzip ~/Downloads/sbb.zip -d ~/works/sbb
 ```
 
-![spring initializr 설정](/assets/img/posts/2024-12-04-spring-how-to-start-spring-boot-project-in-community-edition-of-intellij-idea-2024120402.wepb)
+![spring initializr 설정](/assets/img/posts/2024-12-04-spring-how-to-start-spring-boot-project-in-community-edition-of-intellij-idea-2024120402.webp)
 
 ## 실행
 
 압축 해제 한 `sbb`디렉토리를 intellij 에서 new project 로 추가
 
-![spring initializr 설정](/assets/img/posts/2024-12-04-spring-how-to-start-spring-boot-project-in-community-edition-of-intellij-idea-2024120403.wepb)
+![spring initializr 설정](/assets/img/posts/2024-12-04-spring-how-to-start-spring-boot-project-in-community-edition-of-intellij-idea-2024120403.webp)

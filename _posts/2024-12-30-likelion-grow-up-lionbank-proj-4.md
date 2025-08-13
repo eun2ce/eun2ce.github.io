@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-12-27-likelion-grow-up-lionbank-proj-4-2024-12-30-11-48-30.wepb
+  path: /assets/img/posts/2024-12-27-likelion-grow-up-lionbank-proj-4-2024-12-30-11-48-30.webp
   alt: "은행 시스템 개선: stream 과 enum 을 활용한 메뉴 조회 기능 리팩터링"
 ---
 

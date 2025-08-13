@@ -13,7 +13,7 @@ mermaid: false
 
 ## 상속 구조 
 
-![throwable](/assets/img/posts/2024-12-11-likelion-java-try-catch-finally-2024-12-11-16-24-30.wepb)
+![throwable](/assets/img/posts/2024-12-11-likelion-java-try-catch-finally-2024-12-11-16-24-30.webp)
 
 * 오류(Error): 수습하기 어려운 문제
 * 예외(Exception): 개발자 또는 사용자의 실수로 발생한 문제

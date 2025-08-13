@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-12-24-likelion-grow-up-lionbank-proj-2-2024-12-24-16-24-59.wepb
+  path: /assets/img/posts/2024-12-24-likelion-grow-up-lionbank-proj-2-2024-12-24-16-24-59.webp
   alt: "은행 시스템 개선: Scanner 를 BufferedReader 로 변환"
 ---
 

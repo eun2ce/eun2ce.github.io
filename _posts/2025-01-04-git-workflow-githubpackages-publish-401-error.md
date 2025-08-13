@@ -8,7 +8,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2025-01-04-git-workflow-githubpackages-publish-401-error-2025-01-04-13-38-09.wepb
+  path: /assets/img/posts/2025-01-04-git-workflow-githubpackages-publish-401-error-2025-01-04-13-38-09.webp
   alt: "Could not PUT 'https://maven.pkg.github.com/xxx....jar'. Received status code 401 from server: Unauthorized"
 ---
 
@@ -95,6 +95,6 @@ publishing {
 
 ## 결과
 
-![결과](/assets/img/posts/2025-01-04-git-workflow-githubpackages-publish-401-error-2025-01-04-13-38-09.wepb)
+![결과](/assets/img/posts/2025-01-04-git-workflow-githubpackages-publish-401-error-2025-01-04-13-38-09.webp)
 
 > 혹시 다른 이유로 동일한 문제를 겪으신 분들은 댓글로 알려주세요 !

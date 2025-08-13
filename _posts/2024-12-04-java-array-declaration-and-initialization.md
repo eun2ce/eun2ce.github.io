@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-12-04-java-array-declaration-and-initialization-20241204-14-01-00.wepb
+  path: /assets/img/posts/2024-12-04-java-array-declaration-and-initialization-20241204-14-01-00.webp
   alt: "[java] 배열 선언과 초기화"
 ---
 

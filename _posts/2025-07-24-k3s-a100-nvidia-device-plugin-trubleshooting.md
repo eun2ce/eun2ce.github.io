@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: assets/img/posts/2025-07-24-k3s-a100-nvidia-device-plugin-trubleshooting-2025-07-24%2015.45.49.wepb
+  path: assets/img/posts/2025-07-24-k3s-a100-nvidia-device-plugin-trubleshooting-2025-07-24%2015.45.49.webp
 ---
 
 ## 구성
@@ -80,7 +80,7 @@ relocation error: libc.so.6: symbol _dl_audit_preinit not defined in file ld-lin
 
 확인
 
-![](/assets/img/posts/2025-07-24-k3s-a100-nvidia-device-plugin-trubleshooting-2025-07-24%2015.45.49.wepb)
+![](/assets/img/posts/2025-07-24-k3s-a100-nvidia-device-plugin-trubleshooting-2025-07-24%2015.45.49.webp)
 
 ```bash
 Capacity:

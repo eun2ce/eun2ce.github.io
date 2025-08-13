@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-11-29-likelion-bootcamp-acceptance-story-2024112901.wepb
+  path: /assets/img/posts/2024-11-29-likelion-bootcamp-acceptance-story-2024112901.webp
   alt: "[ 멋쟁이사자처럼 백엔드 스쿨 ] 백엔드 java 부트캠프 13기 지원과 합격"
 ---
 

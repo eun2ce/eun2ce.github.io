@@ -8,7 +8,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-12-06-likelion-java-static-final-static-final-2024-12-06-11-48-18.wepb
+  path: /assets/img/posts/2024-12-06-likelion-java-static-final-static-final-2024-12-06-11-48-18.webp
   alt: "[ 멋쟁이사자처럼 백엔드 스쿨 ] Java 프로그래밍 기초 - static, final, static final 차이"
 ---
 
@@ -84,7 +84,7 @@ class ExampleClass extends FinalClass {
 // }
 ```
 
-![final class 상속 시 생기는 문제](/assets/img/posts/2024-12-06-likelion-java-static-final-static-final-2024-12-06-11-48-18.wepb)
+![final class 상속 시 생기는 문제](/assets/img/posts/2024-12-06-likelion-java-static-final-static-final-2024-12-06-11-48-18.webp)
 
 ### static final
 

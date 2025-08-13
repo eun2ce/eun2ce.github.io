@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-12-02-java-version-switching-2024120201.wepb
+  path: /assets/img/posts/2024-12-02-java-version-switching-2024120201.webp
   alt: "[java] 여러가지 버전을 함께 사용하는 방법"
 ---
 
@@ -33,4 +33,4 @@ export PATH=${PATH}:$JAVA_HOME/bin:
 
 default 로 21버전을 사용하고 아래와 같이 터미널에 입력하면 한시적으로 자바 버전을 변경 할 수 있습니다.
 
-![java_version_switching](/assets/img/posts/2024-12-02-java-version-switching-2024120201.wepb)
+![java_version_switching](/assets/img/posts/2024-12-02-java-version-switching-2024120201.webp)
