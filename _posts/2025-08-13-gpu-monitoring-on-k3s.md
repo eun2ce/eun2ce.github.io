@@ -7,6 +7,8 @@ tags: [ "k8s", "dcgm-exporter", "prometheus", "grafana", "gpu-driver-plugin" ]
 pin: false
 math: false
 mermaid: false
+image:
+  path: /assets/img/posts/2025-08-13-gpu-monitoring-on-k3s-2025-08-13-10-38.webp
 ---
 
 * 환경
