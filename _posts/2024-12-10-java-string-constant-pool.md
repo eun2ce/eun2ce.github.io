@@ -67,7 +67,7 @@ String e = "Java";
 System.out.println(d == e); // true, 같은 객체를 참조
 ```
 
-[//]: # (![inter method]&#40;/assets/img/posts/2024-12-10-java-string-constant-pool-2024-12-10-16-14-11.png&#41;)
+[//]: # (![inter method]&#40;/assets/img/posts/2024-12-10-java-string-constant-pool-2024-12-10-16-14-11.wepb&#41;)
 
 
 이와 같은 방식으로 `String Pool`은 Java 의 문자열 처리에 있어 중요한 역할을 하며, 메모리와 성능을 최적화하는 데 도움을 줍니다.

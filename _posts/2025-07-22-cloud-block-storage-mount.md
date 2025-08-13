@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2025-07-22-cloud-block-storage-mount-2025-07-22-10-53-17.png
+  path: /assets/img/posts/2025-07-22-cloud-block-storage-mount-2025-07-22-10-53-17.wepb
 ---
 
 클라우드 기본 사용량이 적어 스토리지 89%까지 차서 문제가 되었다.
@@ -21,7 +21,7 @@ tmpfs                                                            89G  1.2M   89G
 
 아래와 같이 블록 스토리지를 생성 후 연결
 
-![](/assets/img/posts/2025-07-22-cloud-block-storage-mount-2025-07-22-10-53-17.png)
+![](/assets/img/posts/2025-07-22-cloud-block-storage-mount-2025-07-22-10-53-17.wepb)
 
 이후 인스턴스에 접근하면 아래와같이 루트 블록스토리지와 추가 블록스토리지인 \`vdb\`를 볼 수 있다.
 

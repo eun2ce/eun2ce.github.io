@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-12-27-likelion-grow-up-lionbank-proj-3-2024-12-27-15-34-07.png
+  path: /assets/img/posts/2024-12-27-likelion-grow-up-lionbank-proj-3-2024-12-27-15-34-07.wepb
   alt: "은행 시스템 개선: thread & logging 기능 추가"
 ---
 
@@ -64,7 +64,7 @@ public class FileReaderTask extends Thread {
 
 아래와 같은 내용이 `log.txt` 파일에 남는다.
 
-![fetch logfile](/assets/img/posts/2024-12-27-likelion-grow-up-lionbank-proj-3-2024-12-27-15-34-07.png)
+![fetch logfile](/assets/img/posts/2024-12-27-likelion-grow-up-lionbank-proj-3-2024-12-27-15-34-07.wepb)
 
 > 자세한 패치 내용은 [이 곳](https://github.com/eun2ce/likelion/commit/d6aeb14027b493a5b92c5ea5361933f6854f9173)을 참고해주세요.
 {: .prompt-info}

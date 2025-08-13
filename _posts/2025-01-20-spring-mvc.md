@@ -169,7 +169,7 @@ public class UserController {
 
 `http://localhost:8080/usesr/new` 로 접속하면 아래와 비슷한 화면을 확인할 수 있습니다.
 
-![result](/assets/img/posts/2025-01-20-spring-mvc-2025-01-21-13-05-38.png)
+![result](/assets/img/posts/2025-01-20-spring-mvc-2025-01-21-13-05-38.wepb)
 
 그러나 아직 데이터를 입력하고 등록을 하더라도 어디로 보낼지, 어떻게 보낼지 작성하지 않았기 때문에 아무일도 일어나지 않습니다.
 

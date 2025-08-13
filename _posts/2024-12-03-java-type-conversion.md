@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-12-03-java-type-conversion-2024120301.png
+  path: /assets/img/posts/2024-12-03-java-type-conversion-2024120301.wepb
   alt: "[java] 형변환"
 ---
 

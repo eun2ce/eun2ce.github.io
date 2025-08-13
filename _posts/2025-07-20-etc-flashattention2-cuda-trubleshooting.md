@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2025-07-20-etc-flashattention2-cuda-trubleshooting-img.png
+  path: /assets/img/posts/2025-07-20-etc-flashattention2-cuda-trubleshooting-img.wepb
 ---
 
 신규 서버에 서빙용 모델을 올리던 중 아래와 같은 오류 발생.
@@ -44,4 +44,4 @@ sudo apt-get update
 sudo apt-get -y install cuda-toolkit-12-6
 ```
 
-![img](/assets/img/posts/2025-07-20-etc-flashattention2-cuda-trubleshooting-img.png)
+![img](/assets/img/posts/2025-07-20-etc-flashattention2-cuda-trubleshooting-img.wepb)

@@ -8,7 +8,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-12-18-git-add-a-specific-folder-from-a-git-repo-as-a-git-submodule-2024-12-18-10-24-34.png
+  path: /assets/img/posts/2024-12-18-git-add-a-specific-folder-from-a-git-repo-as-a-git-submodule-2024-12-18-10-24-34.wepb
   alt: "repo 의 특정 폴더를 다른 repo 하위 모듈로 추가하는 방법"
 ---
 
@@ -56,7 +56,7 @@ $ (~/works/reivew-team6/bankproj) >  git submodule absorbgitdirs
 $ (~/works/reivew-team6/bankproj) >  git -C lionbank-eun2ce config core.sparseCheckout true
 ```
 
-![submodule](/assets/img/posts/2024-12-18-git-add-a-specific-folder-from-a-git-repo-as-a-git-submodule-2024-12-18-10-24-34.png)
+![submodule](/assets/img/posts/2024-12-18-git-add-a-specific-folder-from-a-git-repo-as-a-git-submodule-2024-12-18-10-24-34.wepb)
 
 ### 특정 디렉토리 지정
 

@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-13-30-27.png
+  path: /assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-13-30-27.wepb
 0  alt: "spring boot 와 java 를 이용한 게시판 만들기"
 ---
 
@@ -44,7 +44,7 @@ image:
 
 게시판 프로젝트에 처음 spring security 를 적용했더니, 게시글 전체보는 페이지에서도 인증을 요구하는 화면이 나타났습니다.
 
-![login](/assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-13-30-27.png)
+![login](/assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-13-30-27.wepb)
 
 ## 문제 및 해결
 
@@ -104,20 +104,20 @@ spring.mail.properties.mail.smtp.starttls.enable=true
 
 전체 게시판 글을 확인하고 글을 확인할 수 있습니다.
 
-![check post](/assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-14-24-37.png)
+![check post](/assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-14-24-37.wepb)
 
 회원가입을 해야하고 해당 이메일은 인증이 가능해야 합니다.
 
 * 가입 된 사용자만 글을 수정하고 댓글을 작성할 수 있습니다.
 
-![modify post](/assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-14-26-06.png)
+![modify post](/assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-14-26-06.wepb)
 
 비밀번호를 변경할 수 있습니다.
 
-![change pw](/assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-14-24-48.png)
+![change pw](/assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-14-24-48.wepb)
 
 * 패스워드 변경 시 이메일 인증이 필요하며, 확인 된 사용자만 패스워드 변경이 이루어 집니다.
-  ![change pa (with.email)](/assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-14-25-08.png)
+  ![change pa (with.email)](/assets/img/posts/2024-12-27-project-sbb-simple-springboot-board-2024-12-27-14-25-08.wepb)
 
 ### github
 

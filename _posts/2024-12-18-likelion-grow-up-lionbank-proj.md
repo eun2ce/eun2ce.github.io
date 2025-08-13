@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2024-12-18-likelion-grow-up-lionbank-proj-2024-12-18-09-37-11.png
+  path: /assets/img/posts/2024-12-18-likelion-grow-up-lionbank-proj-2024-12-18-09-37-11.wepb
   alt: "docker-compose 로 MySQL 활용하기: 은행 사용자 정보 저장"
 ---
 
@@ -181,7 +181,7 @@ init.sql // 생성 되어 있음
 $ docker logs mysql
 ```
 
-![docker_container_logs](/assets/img/posts/2024-12-18-likelion-grow-up-lionbank-proj-2024-12-18-09-36-12.png)
+![docker_container_logs](/assets/img/posts/2024-12-18-likelion-grow-up-lionbank-proj-2024-12-18-09-36-12.wepb)
 
 정상 실행 된 것을 볼 수 있습니다.
 
@@ -209,6 +209,6 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 mysql> show tables;
 ```
 
-![docker_container_logs](/assets/img/posts/2024-12-18-likelion-grow-up-lionbank-proj-2024-12-18-09-37-11.png)
+![docker_container_logs](/assets/img/posts/2024-12-18-likelion-grow-up-lionbank-proj-2024-12-18-09-37-11.wepb)
 
 > git repo [https://github.com/eun2ce/likelion/tree/main/lionbank](https://github.com/eun2ce/likelion/tree/main/lionbank)

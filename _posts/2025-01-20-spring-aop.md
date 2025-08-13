@@ -8,7 +8,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: /assets/img/posts/2025-01-20-spring-aop-2025-01-20-20-09-36.png
+  path: /assets/img/posts/2025-01-20-spring-aop-2025-01-20-20-09-36.wepb
   alt: "[Spring] AOP"
 ---
 
@@ -112,11 +112,11 @@ public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
 
 ### 결과
 
-![결과](/assets/img/posts/2025-01-20-spring-aop-2025-01-20-19-54-56.png)
+![결과](/assets/img/posts/2025-01-20-spring-aop-2025-01-20-19-54-56.wepb)
 
 ## AOP 동작 방식
 
-![동작방식](/assets/img/posts/2025-01-20-spring-aop-2025-01-20-20-09-36.png "출처: baeldung")
+![동작방식](/assets/img/posts/2025-01-20-spring-aop-2025-01-20-20-09-36.wepb "출처: baeldung")
 
 여러 `Join point`들이 실행되고, 이때 특정 `Pointcut`으로 필터링 된 포인트 컷이 호출되는 순간 advice 객체의 어드바이스 메서드가 실행됩니다.
 
