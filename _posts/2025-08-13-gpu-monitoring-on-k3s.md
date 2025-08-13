@@ -261,5 +261,5 @@ grafana:
 
 ## 결과
 
-![](/assets/img/posts/2025-08-13-gpu-monitoring-on-k3s-2025-08-13-10-37.png)
-![](/assets/img/posts/2025-08-13-gpu-monitoring-on-k3s-2025-08-13-10-38.png)
+![](/assets/img/posts/2025-08-13-gpu-monitoring-on-k3s-2025-08-13-10-37.webp)
+![](/assets/img/posts/2025-08-13-gpu-monitoring-on-k3s-2025-08-13-10-38.webp)
