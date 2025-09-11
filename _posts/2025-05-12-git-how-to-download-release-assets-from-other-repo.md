@@ -1,8 +1,9 @@
 ---
-title: "[git] GitHub Actions에서 다른 Repository의 Release Asset 다운로드 방법"
+title: "[GitHub Actions] 다른 Repository의 Release Asset 다운로드 방법"
+description: "GitHub Actions 워크플로우에서 GitHub App 인증을 활용해 다른 Repository의 Release Asset을 안전하게 다운로드하는 방법을 정리합니다."
 date: 2025-05-12 18:47:00 +0900
-categories: [ "etc", "git" ]
-tags: [ "branch", "git" ]
+categories: [ "development", "dev&tools" ]
+tags: [ "git", "github-actions", "release-asset", "ci-cd", "automation", "private-repo" ]
 pin: false
 math: false
 mermaid: false

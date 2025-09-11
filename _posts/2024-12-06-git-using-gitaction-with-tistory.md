@@ -1,9 +1,9 @@
 ---
-title: "[git] tistory 블로그 글 git action 을 이용해 github 에 올리는 방법"
+title: "tistory 블로그 글 git action 을 이용해 github 에 올리기"
 description: "git Action 을 이용한 블로그와 github 동기화하는 방법을 다룹니다."
 date: 2024-12-06 15:32:00 +0900
-categories: [ "etc", "git" ]
-tags: [ "blog", "crawl", "crawling", "git", "python", "tistory", "깃", "깃헙", "블로그", "크롤링" ]
+categories: [ "development", "dev&tools" ]
+tags: ["blog", "tistory", "crawling", "git", "github", "python"]
 pin: false
 math: false
 mermaid: false

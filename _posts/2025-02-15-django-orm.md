@@ -1,8 +1,9 @@
 ---
-title: "[django] sql 을 이해하고 django ORM 사용하기"
+title: "[Django] ORM 최적화와 Django REST Framework Serializer 정리"
+description: "Django ORM의 select_related, prefetch_related 사용법과 Django REST Framework Serializer, GenericAPIView, Mixins를 활용한 API 개발 방법을 정리합니다."
 date: 2025-02-15 20:03:00 +0900
-categories: [ "programming", "django" ]
-tags: [ "community", "django", "python", "programming", "prefetch_related", "select_related" ]
+categories: [ "development", "frameworks" ]
+tags: ["django", "python", "orm", "drf", "serializer", "select_related", "prefetch_related"]
 pin: false
 math: false
 mermaid: false

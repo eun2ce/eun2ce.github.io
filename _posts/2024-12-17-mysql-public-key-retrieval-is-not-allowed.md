@@ -1,8 +1,9 @@
 ---
-title: "[mysql/trubleshooting] Public Key Retrieval is not allowed"
+title: "[MySQL] Public Key Retrieval is not allowed"
+description: "MySQL 연결 오류: Public Key Retrieval is not allowed 해결 방법"
 date: 2024-12-17 00:33:00 +0900
-categories: [ "programming", "database" ]
-tags: [ "database", "mysql", "trubleshooting" ]
+categories: [ "development", "frameworks" ]
+tags: ["mysql", "troubleshooting"]
 pin: false
 math: false
 mermaid: false

@@ -1,8 +1,8 @@
 ---
-title: "[etc] ssh 키에 패스 프레이즈 없이 생성하는 방법과 매번 인증하게 생성하는 방법"
+title: "[SSH/GitHub] SSH 키 생성: 패스프레이즈 없는 방법 vs 매번 인증하는 방법"
 date: 2025-07-18 12:42:00 +0900
-categories: [ "etc", "os" ]
-tags: [ "ssh", "pass" ]
+categories: [ "development", "dev&tools" ]
+tags: [ "ssh", "ssh-keygen", "ssh-agent", "github", "git", "passphrase" ]
 pin: false
 math: false
 mermaid: false

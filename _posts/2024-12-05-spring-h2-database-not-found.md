@@ -1,9 +1,9 @@
 ---
-title: "[spring boot] H2 Database \"testdb\" not found, either pre-create it or allow remote database creation 해결"
+title: "H2 Database \"testdb\" not found, either pre-create it or allow remote database creation 해결"
 description: ""
 date: 2024-12-05 17:28:00 +0900
-categories: [ "programming", "spring" ]
-tags: [ "H2", "spring", "java", "programming" ]
+categories: [ "development", "frameworks" ]
+tags: [ "H2", "spring-boot", "java", "programming" ]
 pin: false
 math: false
 mermaid: false

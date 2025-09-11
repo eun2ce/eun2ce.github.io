@@ -1,8 +1,9 @@
 ---
-title: "[Docker] Docker를 활용한 macOS → Windows 실행파일(.exe) 빌드 자동화"
+title: "[Docker] macOS에서 Windows 실행파일(.exe) 빌드 자동화"
+description: "Docker와 PyInstaller를 활용해 macOS 환경에서 Windows 실행파일(.exe)을 cross-build하고 자동화하는 방법을 정리합니다."
 date: 2025-04-08 21:47:00 +0900
-categories: [ "ops", "docker" ]
-tags: ["pyinstaller", "docker", "cross-compilation", "windows", "exe"]
+categories: [ "infrastructure", "docker" ]
+tags: [ "docker", "pyinstaller", "cross-build", "windows-exe", "ci-cd" ]
 pin: false
 math: false
 mermaid: false

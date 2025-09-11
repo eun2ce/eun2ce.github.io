@@ -1,56 +1,47 @@
 ---
-title: "[NVIDIA/trubleshooting] Allocate failed due to device plugin GetPreferredAllocation rpc failed with err: rpc error: code = Unknown desc = Unable to retrieve list of available devices: error creating nvml.Device 0: nvml: Insufficient Permissions, which is unexpected"
+title: "[GPU/K8s] NVML Insufficient Permissions 에러로 Pod GPU 할당 실패 해결"
+description: "Kubernetes에서 A100 GPU(MIG/Non-MIG 혼용) 환경에서 Pod GPU 할당 시 NVML Insufficient Permissions 오류가 발생한 사례와 해결 방법 정리."
 date: 2025-07-24 15:32:00 +0900
-categories: [ "ops", "gpu" ]
-tags: [ "nhncloud", "k8s", "nvidia", "troubleshooting" ]
+categories: [ "infrastructure", "gpu" ]
+tags: [ "k8s", "nvidia", "device-plugin", "permissions", "troubleshooting" ]
 pin: false
 math: false
 mermaid: false
 ---
 
-k8s pod 에 gpu를 할당하는 과정에서 발생한 UnexpectedAdmissionError 를 해결합니다.
+## 문제 상황
+
+Pod 스케줄링 과정에서 GPU 할당이 실패하고, `UnexpectedAdmissionError`가 발생.
 
 ```bash
 Events:
-  Type     Reason                    Age   From                       Message
-  ----     ------                    ----  ----                       -------
-  Normal   Scheduled                 18s   jupyterhub-user-scheduler  Successfully assigned jupyter/jupyter-infofla to a100-80g-4
-  Warning  UnexpectedAdmissionError  18s   kubelet                    Allocate failed due to device plugin GetPreferredAllocation rpc failed with err: rpc error: code = Unknown desc = Unable to retrieve list of available devices: error creating nvml.Device 0: nvml: Insufficient Permissions, which is unexpected
+  Warning  UnexpectedAdmissionError  18s  kubelet
+  Allocate failed due to device plugin GetPreferredAllocation rpc failed with err:
+  rpc error: code = Unknown desc = Unable to retrieve list of available devices:
+  error creating nvml.Device 0: nvml: Insufficient Permissions, which is unexpected
 ```
 
-## 분석
+## 원인 분석
 
-- UnexpectedAdmissionError는 nivida gpu 관련된 에러가 발생했을 때 볼 수 있는 상태 메시지
-- kubectl을 통해 별다른 로그 없음
+- Kubernetes 기본 자원(CPU, 메모리)와 달리 GPU는 제조사별 플러그인을 통해 관리됨  
+- NVIDIA Device Plugin이 **NVML 권한 부족**으로 디바이스 초기화 실패  
+- 특히 **A100 GPU를 MIG와 Non-MIG로 혼합 사용**할 때 권한 요구 사항이 까다로움  
+- 참고: [NVIDIA k8s-device-plugin](https://github.com/NVIDIA/k8s-device-plugin)
 
-즉, k8s에러가 아니라 k8s에서 nvidia gpu를 알기위해(?) 사용하는 nvidia extension관련 에러일 가능성 높음
+즉, Pod Admission 단계에서 NVML 접근 권한 부족(`Insufficient Permissions`) 때문에 자원 할당이 거부된 것.
 
-> CPU, Memory와 별개로 GPU는 종류가 여러개가 있다보니, kubernetes에서 자원 할당 정책을 적용해주기 위해서는 제조사 별로 extension을 별도로 사용해줘야한다고 함
+## 해결 방법
 
- nvml.Device 의 권한 에러 발생으로 확인할 수 있는데, device관련 사항은 nvidia extension 중 nvidia-device-plugin이 관리함
+NVIDIA Device Plugin DaemonSet에 아래 설정 추가:
 
- [https://github.com/NVIDIA/k8s-device-plugin](https://github.com/NVIDIA/k8s-device-plugin)
+| 설정                                | 역할                                       |
+| --------------------------------- | ---------------------------------------- |
+| `NVIDIA_MIG_MONITOR_DEVICES=all`  | GPU 및 MIG 인스턴스를 모두 모니터링하도록 지정 |
+| `capabilities.add: ["SYS_ADMIN"]` | NVML을 통한 GPU 내부 정보 접근 권한 부여        |
 
- - 클러스터 노드마다 gpu 개수를 k8s에 안내
- - gpu 상태 추적
- - k8s 클러스터 내 컨테이너에서 gpu를 사용할 수 있도록 기능 제공
-
- > 관련 에러 메시지 [https://github.com/NVIDIA/k8s-device-plugin/issues/260](https://github.com/NVIDIA/k8s-device-plugin/issues/260)
- > [https://equus3144.medium.com/nvidia-ml-py%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%84%9C-kubernetes%EC%97%90-%EB%B0%B0%ED%8F%AC%EB%90%98%EC%96%B4-%EC%9E%88%EB%8A%94-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EC%97%90%EC%84%9C-mig-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%82%AC%EC%9A%A9%EB%9F%89-%EC%B2%B4%ED%81%AC%ED%95%98%EA%B8%B0-c73a70d700fa](https://equus3144.medium.com/nvidia-ml-py%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%84%9C-kubernetes%EC%97%90-%EB%B0%B0%ED%8F%AC%EB%90%98%EC%96%B4-%EC%9E%88%EB%8A%94-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EC%97%90%EC%84%9C-mig-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%82%AC%EC%9A%A9%EB%9F%89-%EC%B2%B4%ED%81%AC%ED%95%98%EA%B8%B0-c73a70d700fa)
-
- 즉, A100 GPU를 분할 사용 하지 않는 경우를 섞어 사용할 때 문제가 발생
-
-
-필자는 아래 두 옵션을 추가해서 문제 해결
-
-| 설정                                | 역할                           |
-| --------------------------------- | ---------------------------- |
-| `NVIDIA_MIG_MONITOR_DEVICES=all`  | 어떤 GPU (MIG 인스턴스)를 모니터링할지 지정 |
-| `capabilities.add: ["SYS_ADMIN"]` | 그 GPU의 내부 정보에 접근할 권한을 부여     |
-
+## 최종 DaemonSet 매니페스트
 
 ```yaml
-# nvidia-device-plugin.yml
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
@@ -76,8 +67,8 @@ spec:
           effect: NoSchedule
       priorityClassName: "system-node-critical"
       containers:
-        - image: nvcr.io/nvidia/k8s-device-plugin@sha256:964847cc3fd85ead286be1d74d961f53d638cd4875af51166178b17bba90192f
-          name: nvidia-device-plugin-ctr
+        - name: nvidia-device-plugin-ctr
+          image: nvcr.io/nvidia/k8s-device-plugin@sha256:964847cc3fd85ead286be1d74d961f53d638cd4875af51166178b17bba90192f
           env:
             - name: FAIL_ON_INIT_ERROR
               value: "false"
@@ -90,8 +81,8 @@ spec:
           securityContext:
             allowPrivilegeEscalation: false
             capabilities:
+              drop: ["ALL"]
               add: ["SYS_ADMIN"]
-                #drop: ["ALL"]
           volumeMounts:
             - name: device-plugin
               mountPath: /var/lib/kubelet/device-plugins
@@ -106,3 +97,12 @@ spec:
           hostPath:
             path: /dev
 ```
+
+---
+
+## 정리
+
+- Pod GPU 할당 실패(`UnexpectedAdmissionError`)는 대부분 **NVIDIA Device Plugin → NVML 권한 문제**  
+- **SYS_ADMIN capability**를 부여하면 해결됨  
+- MIG/Non-MIG 혼용 환경에서는 `NVIDIA_MIG_MONITOR_DEVICES=all` 설정이 필요  
+- 공식 YAML을 기준으로, **권한과 환경변수만 최소 수정**하는 것이 가장 안전

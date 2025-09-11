@@ -1,8 +1,9 @@
 ---
-title: "[python] Conda 환경의 불필요한 패키지 없이 요구사항 파일 생성하기: pipreqs 활용 가이드"
+title: "[Python] pipreqs로 Conda 환경에서 requirements.txt 생성하기"
+description: "Conda 환경에서 불필요한 패키지를 제외하고 실제 사용 중인 라이브러리만 추출해 requirements.txt를 생성하는 방법을 pipreqs로 정리합니다."
 date: 2025-04-30 14:00:00 +0900
-categories: [ "language", "python" ]
-tags: [ "algorithm", "function", "python", "사용법", "프로그래밍" ]
+categories: [ "development", "language" ]
+tags: [ "python", "conda", "pipreqs", "requirements.txt", "guide" ]
 pin: false
 math: false
 mermaid: false

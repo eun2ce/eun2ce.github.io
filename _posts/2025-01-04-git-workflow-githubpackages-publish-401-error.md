@@ -1,15 +1,15 @@
 ---
-title: "[github actions] Could not PUT 'https://maven.pkg.github.com/xxx....jar'. Received status code 401 from server: Unauthorized"
-description: "git Actions 에서 배포 시 401 에러에 대해 다룹니다."
+title: "[GitHub Actions] Maven Publish 시 401 Unauthorized 오류 해결"
+description: "GitHub Actions에서 Maven 패키지 배포 시 발생하는 401 Unauthorized 오류에 대한 해결 방법을 다룹니다."
 date: 2024-12-18 10:47:00 +0900
-categories: [ "etc", "git" ]
-tags: [ "401", "git", "github actions", "unauthorized", "깃", "깃헙", "오류" ]
+categories: ["development", "dev&tools"]
+tags: ["git", "github-actions", "401", "unauthorized", "ci-cd", "error"]
 pin: false
 math: false
 mermaid: false
 image:
   path: /assets/img/posts/2025-01-04-git-workflow-githubpackages-publish-401-error-2025-01-04-13-38-09.webp
-  alt: "Could not PUT 'https://maven.pkg.github.com/xxx....jar'. Received status code 401 from server: Unauthorized"
+  alt: "GitHub Actions에서 Maven Publish 시 401 Unauthorized 오류 해결"
 ---
 
 ## 원인
@@ -96,5 +96,3 @@ publishing {
 ## 결과
 
 ![결과](/assets/img/posts/2025-01-04-git-workflow-githubpackages-publish-401-error-2025-01-04-13-38-09.webp)
-
-> 혹시 다른 이유로 동일한 문제를 겪으신 분들은 댓글로 알려주세요 !
