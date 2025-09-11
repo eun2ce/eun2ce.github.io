@@ -9,7 +9,6 @@ math: false
 mermaid: false
 ---
 
-# Kubernetes Pod Pending 현상 정리
 
 스케일을 내렸다가 다시 올렸을 때 **서비스가 안 올라오고 Pod가 Pending 상태**로 남는 경우가 자주 발생합니다.  
 이때 발생 가능한 원인과 `kubectl describe` 시 이벤트 메시지 예시를 정리했습니다.
