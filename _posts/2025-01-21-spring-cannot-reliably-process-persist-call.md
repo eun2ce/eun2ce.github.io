@@ -3,7 +3,7 @@ title: "[Spring Data JPA] No EntityManager with actual transaction available 오
 description: "Spring Data JPA에서 @Transactional 누락으로 발생하는 'No EntityManager with actual transaction available for current thread' 오류 해결 방법을 다룹니다."
 date: 2025-01-21 10:08:00 +0900
 categories: [ "development", "frameworks" ]
-tags: ["spring", "spring-data-jpa", "java", "jpa", "transaction", "exception", "troubleshooting"]
+tags: [ "spring", "spring-data-jpa", "java", "jpa", "transaction", "exception", "troubleshooting" ]
 pin: false
 math: false
 mermaid: false

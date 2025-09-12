@@ -3,7 +3,7 @@ title: "[MySQL] Public Key Retrieval is not allowed"
 description: "MySQL 연결 오류: Public Key Retrieval is not allowed 해결 방법"
 date: 2024-12-17 00:33:00 +0900
 categories: [ "development", "frameworks" ]
-tags: ["mysql", "troubleshooting"]
+tags: [ "mysql", "troubleshooting" ]
 pin: false
 math: false
 mermaid: false

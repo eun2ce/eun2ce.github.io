@@ -1,9 +1,9 @@
 ---
-title: "[git] git submodule - repo 의 특정 폴더를 다른 repo 하위 모듈로 추가하는 방법"
-description: "git Action 을 이용한 블로그와 github 동기화하는 방법을 다룹니다."
+title: "[Git] 특정 폴더를 다른 Repo의 Submodule로 추가하는 방법"
+description: "Git Submodule을 이용해 레포지토리 내 특정 폴더를 다른 레포지토리의 하위 모듈로 추가하는 방법을 다룹니다."
 date: 2024-12-18 10:47:00 +0900
-categories: ["development", "dev&tools"]
-tags: ["git", "submodule", "repository", "version-control"]
+categories: [ "development", "dev&tools" ]
+tags: [ "git", "submodule", "repository", "version-control" ]
 pin: false
 math: false
 mermaid: false

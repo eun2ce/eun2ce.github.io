@@ -2,8 +2,8 @@
 title: "[GitHub Actions] Maven Publish 시 401 Unauthorized 오류 해결"
 description: "GitHub Actions에서 Maven 패키지 배포 시 발생하는 401 Unauthorized 오류에 대한 해결 방법을 다룹니다."
 date: 2024-12-18 10:47:00 +0900
-categories: ["development", "dev&tools"]
-tags: ["git", "github-actions", "401", "unauthorized", "ci-cd", "error"]
+categories: [ "development", "dev&tools" ]
+tags: [ "git", "github-actions", "401", "unauthorized", "ci-cd", "error" ]
 pin: false
 math: false
 mermaid: false
